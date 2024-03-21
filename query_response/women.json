@@ -1,0 +1,306 @@
+{
+  "took" : 9,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 12,
+      "relation" : "eq"
+    },
+    "max_score" : 5.161767,
+    "hits" : [
+      {
+        "_index" : "movies",
+        "_id" : "DcgnYY4BohQSkzCiQE0F",
+        "_score" : 5.161767,
+        "_source" : {
+          "Poster_Link" : "https://m.media-amazon.com/images/M/MV5BZjM3ZTAzZDYtZmFjZS00YmQ1LWJlOWEtN2I4MDRmYzY5YmRlL2ltYWdlXkEyXkFqcGdeQXVyMjgyNjk3MzE@._V1_UX67_CR0,0,67,98_AL_.jpg",
+          "Released_Year" : 1960,
+          "Certificate" : "",
+          "Genre" : [
+            "Drama",
+            "Horror",
+            "Thriller"
+          ],
+          "IMDB_Rating" : 7.7,
+          "Overview" : "A young man murders women, using a movie camera to film their dying expressions of terror.",
+          "Meta_score" : null,
+          "Director" : "Michael Powell",
+          "No_of_Votes" : 31354,
+          "Gross" : 83957,
+          "Title" : "Peeping Tom",
+          "Runtime_minutes" : 101,
+          "Stars" : [
+            "Karlheinz Böhm",
+            "Anna Massey",
+            "Moira Shearer",
+            "Maxine Audley"
+          ],
+          "Script_path" : "Peeping Tom.txt"
+        }
+      },
+      {
+        "_index" : "movies",
+        "_id" : "gsgnYY4BohQSkzCiIUt5",
+        "_score" : 4.972739,
+        "_source" : {
+          "Poster_Link" : "https://m.media-amazon.com/images/M/MV5BYmVmMGQ3NzEtM2FiNi00YThhLWFkZjYtM2Y0MjZjNGE4NzM0XkEyXkFqcGdeQXVyODc0OTEyNDU@._V1_UY98_CR1,0,67,98_AL_.jpg",
+          "Released_Year" : 2002,
+          "Certificate" : "R",
+          "Genre" : [
+            "Drama",
+            "Mystery",
+            "Romance"
+          ],
+          "IMDB_Rating" : 7.9,
+          "Overview" : "Two men share an odd friendship while they care for two women who are both in deep comas.",
+          "Meta_score" : 86,
+          "Director" : "Pedro Almodóvar",
+          "No_of_Votes" : 104691,
+          "Gross" : 9284265,
+          "Title" : "Hable con ella",
+          "Runtime_minutes" : 112,
+          "Stars" : [
+            "Rosario Flores",
+            "Javier Cámara",
+            "Darío Grandinetti",
+            "Leonor Watling"
+          ]
+        }
+      },
+      {
+        "_index" : "movies",
+        "_id" : "J8gnYY4BohQSkzCiBkqx",
+        "_score" : 4.7970667,
+        "_source" : {
+          "Poster_Link" : "https://m.media-amazon.com/images/M/MV5BNGI1MTI1YTQtY2QwYi00YzUzLTg3NWYtNzExZDlhOTZmZWU0XkEyXkFqcGdeQXVyMDkwNTkwNg@@._V1_UY98_CR3,0,67,98_AL_.jpg",
+          "Released_Year" : 2016,
+          "Certificate" : "UA",
+          "Genre" : [
+            "Drama",
+            "Thriller"
+          ],
+          "IMDB_Rating" : 8.1,
+          "Overview" : "When three young women are implicated in a crime, a retired lawyer steps forward to help them clear their names.",
+          "Meta_score" : null,
+          "Director" : "Aniruddha Roy Chowdhury",
+          "No_of_Votes" : 39216,
+          "Gross" : 1241223,
+          "Title" : "Pink",
+          "Runtime_minutes" : 136,
+          "Stars" : [
+            "Taapsee Pannu",
+            "Amitabh Bachchan",
+            "Kirti Kulhari",
+            "Andrea Tariang"
+          ]
+        }
+      },
+      {
+        "_index" : "movies",
+        "_id" : "tcgnYY4BohQSkzCiOUwQ",
+        "_score" : 4.7138042,
+        "_source" : {
+          "Poster_Link" : "https://m.media-amazon.com/images/M/MV5BMTI2NzU1NTc1NF5BMl5BanBnXkFtZTcwOTQ1MjAwMQ@@._V1_UX67_CR0,0,67,98_AL_.jpg",
+          "Released_Year" : 2002,
+          "Certificate" : "R",
+          "Genre" : [
+            "Drama"
+          ],
+          "IMDB_Rating" : 7.7,
+          "Overview" : "Three young Irish women struggle to maintain their spirits while they endure dehumanizing abuse as inmates of a Magdalene Sisters Asylum.",
+          "Meta_score" : 83,
+          "Director" : "Peter Mullan",
+          "No_of_Votes" : 25938,
+          "Gross" : 4890878,
+          "Title" : "The Magdalene Sisters",
+          "Runtime_minutes" : 114,
+          "Stars" : [
+            "Eileen Walsh",
+            "Dorothy Duffy",
+            "Nora-Jane Noone",
+            "Anne-Marie Duff"
+          ]
+        }
+      },
+      {
+        "_index" : "movies",
+        "_id" : "GcgnYY4BohQSkzCiBUqp",
+        "_score" : 4.4077816,
+        "_source" : {
+          "Poster_Link" : "https://m.media-amazon.com/images/M/MV5BNzAyOGIxYjAtMGY2NC00ZTgyLWIwMWEtYzY0OWQ4NDFjOTc5XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX67_CR0,0,67,98_AL_.jpg",
+          "Released_Year" : 1959,
+          "Certificate" : "U",
+          "Genre" : [
+            "Comedy",
+            "Music",
+            "Romance"
+          ],
+          "IMDB_Rating" : 8.2,
+          "Overview" : "After two male musicians witness a mob hit, they flee the state in an all-female band disguised as women, but further complications set in.",
+          "Meta_score" : 98,
+          "Director" : "Billy Wilder",
+          "No_of_Votes" : 243943,
+          "Gross" : 25000000,
+          "Title" : "Some Like It Hot",
+          "Runtime_minutes" : 121,
+          "Stars" : [
+            "Marilyn Monroe",
+            "Tony Curtis",
+            "Jack Lemmon",
+            "George Raft"
+          ]
+        }
+      },
+      {
+        "_index" : "movies",
+        "_id" : "8cgnYY4BohQSkzCiKksp",
+        "_score" : 4.4077816,
+        "_source" : {
+          "Poster_Link" : "https://m.media-amazon.com/images/M/MV5BY2ViOTU5MDQtZTRiZi00YjViLWFiY2ItOTRhNWYyN2ZiMzUyXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UY98_CR1,0,67,98_AL_.jpg",
+          "Released_Year" : 2008,
+          "Certificate" : "",
+          "Genre" : [
+            "Action",
+            "Crime",
+            "Thriller"
+          ],
+          "IMDB_Rating" : 7.8,
+          "Overview" : "A disgraced ex-policeman who runs a small ring of prostitutes finds himself in a race against time when one of his women goes missing.",
+          "Meta_score" : 64,
+          "Director" : "Hong-jin Na",
+          "No_of_Votes" : 58468,
+          "Gross" : null,
+          "Title" : "Chugyeokja",
+          "Runtime_minutes" : 125,
+          "Stars" : [
+            "Kim Yoon-seok",
+            "Jung-woo Ha",
+            "Yeong-hie Seo",
+            "Yoo-Jeong Kim"
+          ]
+        }
+      },
+      {
+        "_index" : "movies",
+        "_id" : "V8gnYY4BohQSkzCiCkpj",
+        "_score" : 4.3373857,
+        "_source" : {
+          "Poster_Link" : "https://m.media-amazon.com/images/M/MV5BOGViNTg4YTktYTQ2Ni00MTU0LTk2NWUtMTI4OTc1YTM0NzQ2XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UX67_CR0,0,67,98_AL_.jpg",
+          "Released_Year" : 2003,
+          "Certificate" : "UA",
+          "Genre" : [
+            "Crime",
+            "Drama",
+            "Mystery"
+          ],
+          "IMDB_Rating" : 8.1,
+          "Overview" : "In a small Korean province in 1986, two detectives struggle with the case of multiple young women being found raped and murdered by an unknown culprit.",
+          "Meta_score" : 82,
+          "Director" : "Bong Joon Ho",
+          "No_of_Votes" : 139558,
+          "Gross" : 14131,
+          "Title" : "Salinui chueok",
+          "Runtime_minutes" : 131,
+          "Stars" : [
+            "Kang-ho Song",
+            "Kim Sang-kyung",
+            "Roe-ha Kim",
+            "Jae-ho Song"
+          ]
+        }
+      },
+      {
+        "_index" : "movies",
+        "_id" : "M8gnYY4BohQSkzCiL0xK",
+        "_score" : 4.269202,
+        "_source" : {
+          "Poster_Link" : "https://m.media-amazon.com/images/M/MV5BYmE0ZGRiMDgtOTU0ZS00YWUwLTk5YWQtMzhiZGVhNzViMGZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX67_CR0,0,67,98_AL_.jpg",
+          "Released_Year" : 1991,
+          "Certificate" : "R",
+          "Genre" : [
+            "Drama",
+            "Fantasy",
+            "Music"
+          ],
+          "IMDB_Rating" : 7.8,
+          "Overview" : "Two parallel stories about two identical women; one living in Poland, the other in France. They don't know each other, but their lives are nevertheless profoundly connected.",
+          "Meta_score" : 86,
+          "Director" : "Krzysztof Kieslowski",
+          "No_of_Votes" : 42376,
+          "Gross" : 1999955,
+          "Title" : "La double vie de Véronique",
+          "Runtime_minutes" : 98,
+          "Stars" : [
+            "Irène Jacob",
+            "Wladyslaw Kowalski",
+            "Halina Gryglaszewska",
+            "Kalina Jedrusik"
+          ]
+        }
+      },
+      {
+        "_index" : "movies",
+        "_id" : "LcgnYY4BohQSkzCiLkzM",
+        "_score" : 4.20313,
+        "_source" : {
+          "Poster_Link" : "https://m.media-amazon.com/images/M/MV5BMjA3Y2I4NjAtMDQyZS00ZGJhLWEwMzgtODBiNzE5Zjc1Nzk1L2ltYWdlXkEyXkFqcGdeQXVyNTc2MDU0NDE@._V1_UX67_CR0,0,67,98_AL_.jpg",
+          "Released_Year" : 1993,
+          "Certificate" : "",
+          "Genre" : [
+            "Comedy",
+            "Drama"
+          ],
+          "IMDB_Rating" : 7.8,
+          "Overview" : "Parallel tales of two sexually obsessed men, one hurting and annoying women physically and mentally, one wandering around the city talking to strangers and experiencing dimensions of life.",
+          "Meta_score" : 84,
+          "Director" : "Mike Leigh",
+          "No_of_Votes" : 34635,
+          "Gross" : 1769305,
+          "Title" : "Naked",
+          "Runtime_minutes" : 132,
+          "Stars" : [
+            "David Thewlis",
+            "Lesley Sharp",
+            "Katrin Cartlidge",
+            "Greg Cruttwell"
+          ]
+        }
+      },
+      {
+        "_index" : "movies",
+        "_id" : "iMgnYY4BohQSkzCiIUv2",
+        "_score" : 4.139071,
+        "_source" : {
+          "Poster_Link" : "https://m.media-amazon.com/images/M/MV5BMTQ5NTI2NTI4NF5BMl5BanBnXkFtZTcwNjk2NDA2OQ@@._V1_UX67_CR0,0,67,98_AL_.jpg",
+          "Released_Year" : 2006,
+          "Certificate" : "A",
+          "Genre" : [
+            "Adventure",
+            "Drama",
+            "Sci-Fi"
+          ],
+          "IMDB_Rating" : 7.9,
+          "Overview" : "In 2027, in a chaotic world in which women have become somehow infertile, a former activist agrees to help transport a miraculously pregnant woman to a sanctuary at sea.",
+          "Meta_score" : 84,
+          "Director" : "Alfonso Cuarón",
+          "No_of_Votes" : 465113,
+          "Gross" : 35552383,
+          "Title" : "Children of Men",
+          "Runtime_minutes" : 109,
+          "Stars" : [
+            "Julianne Moore",
+            "Clive Owen",
+            "Chiwetel Ejiofor",
+            "Michael Caine"
+          ]
+        }
+      }
+    ]
+  }
+}
