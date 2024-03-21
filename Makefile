@@ -1,18 +1,14 @@
-create-network:
-	docker network create elastic
+start-containers:
+	docker compose up -d
 
-run-elastic:
-	docker run -d --name elasticsearch \
-	--net elastic -p 9200:9200 -p 9300:9300 \
-	-e "discovery.type=single-node" -e "xpack.security.enabled=false" \
-	elasticsearch:8.12.2
+create-index:
+	curl -X PUT http://localhost:9200/movies
 
-run-kibana:
-	docker run -d --name kibana \
-	--net elastic -p 5601:5601 \
-	-e "xpack.security.enabled=false" \
-	kibana:8.12.2
+load-data:
+	for file in ./movie_data/*; do \
+  		curl -X POST -H "Content-Type: application/json" -d @$$file http://localhost:9200/movies/_doc ; \
+	done
 
-cleanup:
-	docker stop elasticsearch kibana
-	docker rm elasticsearch kibana
+query-example:
+	curl -X GET "localhost:9200/movies/_search?pretty" -H 'Content-Type: application/json' \
+	-d' { "query": { "match": { "Overview": "women" } } }'
