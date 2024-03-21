@@ -6,8 +6,8 @@ services:
     environment:
       - discovery.type=single-node
       - xpack.security.enabled=false
-#    volumes:
-#      - data01:/usr/share/elasticsearch/data
+    volumes:
+      - elastic-data:/usr/share/elasticsearch/data
     ports:
       - "9200:9200"
       - "9300:9300"
@@ -28,9 +28,9 @@ services:
     networks:
       - elastic
 
-#volumes:
-#  data01:
-#    driver: local
+volumes:
+  elastic-data:
+    driver: local
 
 networks:
   elastic:
