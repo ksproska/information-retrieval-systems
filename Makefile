@@ -4,7 +4,7 @@ start-containers:
 create-index:
 	curl -X PUT http://localhost:9200/movies
 
-load-data: create-index
+load-data:
 	for file in ./movie_data/*; do \
   		curl -X POST -H "Content-Type: application/json" -d @$$file http://localhost:9200/movies/_doc ; \
 	done

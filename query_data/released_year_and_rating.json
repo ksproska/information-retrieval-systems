@@ -1,0 +1,22 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "range": {
+            "Released_Year": {
+              "gt": 1985
+            }
+          }
+        },
+        {
+          "range": {
+            "IMDB_Rating": {
+              "gt": 8.0
+            }
+          }
+        }
+      ]
+    }
+  }
+}

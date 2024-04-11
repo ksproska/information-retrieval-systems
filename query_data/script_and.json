@@ -1,7 +1,7 @@
 {
   "query": {
     "match": {
-      "Script": "women"
+      "Script": "and"
     }
   }
 }
