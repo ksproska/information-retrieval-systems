@@ -1,0 +1,21 @@
+{
+  "query": {
+    "bool": {
+      "should": [
+        {
+          "bool": {
+            "should": [
+              { "match": { "description": "easy" }},
+              { "match": { "description": "topout" }}
+            ]
+          }
+        },
+        {
+          "match": {
+            "description": "chimney"
+          }
+        }
+      ]
+    }
+  }
+}

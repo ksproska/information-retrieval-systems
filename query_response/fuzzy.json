@@ -1,0 +1,287 @@
+{
+  "took" : 8,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 1137,
+      "relation" : "eq"
+    },
+    "max_score" : 13.233742,
+    "hits" : [
+      {
+        "_index" : "routes",
+        "_id" : "WVRy544BWwGzp2KgmVO8",
+        "_score" : 13.233742,
+        "_source" : {
+          "route_name" : "Lichen It",
+          "grade_YDS" : "V0-1",
+          "grade_Font" : "4+",
+          "safety" : "",
+          "type_boulder" : true,
+          "fa" : "Kayla Corcelli",
+          "description" : "Climb up tallest part of boulder to top out for a beautiful view.",
+          "location" : "Within the patio boulders.",
+          "protection" : "Crash pad",
+          "metadata_left_right_seq" : "13",
+          "metadata_parent_lnglat_0" : -81.52968,
+          "metadata_parent_lnglat_1" : 40.11321,
+          "metadata_parent_sector" : "Lakefront Boulders",
+          "metadata_mp_route_id" : "115431929",
+          "metadata_mp_sector_id" : "109675760"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "hFR0544BWwGzp2KgiGlD",
+        "_score" : 12.146785,
+        "_source" : {
+          "route_name" : "Blockhead Beauty",
+          "grade_YDS" : "5.4",
+          "grade_French" : "4a",
+          "grade_Ewbanks" : "12",
+          "grade_UIAA" : "IV",
+          "grade_ZA" : "10",
+          "grade_British" : "VD 3c",
+          "safety" : "",
+          "type_tr" : true,
+          "fa" : "unknown",
+          "description" : "#9 in Sven's; named for the beautiful view. Climb just left of corner on nice ledges. A good warm-up for the area.",
+          "location" : "Back right corner of Overhang Tower (Blockhead).",
+          "protection" : "20-30ft slings for TR. Pro looks sparse but doable.",
+          "metadata_left_right_seq" : "0",
+          "metadata_parent_lnglat_0" : -89.73151,
+          "metadata_parent_lnglat_1" : 43.4168,
+          "metadata_parent_sector" : "Blockhead",
+          "metadata_mp_route_id" : "116756071",
+          "metadata_mp_sector_id" : "105730190"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "FFR0544BWwGzp2KgDmTl",
+        "_score" : 10.658535,
+        "_source" : {
+          "route_name" : "Eagle Rare",
+          "grade_YDS" : "5.4",
+          "grade_French" : "4a",
+          "grade_Ewbanks" : "12",
+          "grade_UIAA" : "IV",
+          "grade_ZA" : "10",
+          "grade_British" : "VD 3c",
+          "safety" : "",
+          "type_trad" : true,
+          "type_tr" : true,
+          "fa" : "??",
+          "description" : "Move up slab on big holds toward hanging arete.  Pass hanging arete on the right and follow resulting inside corner to the top.  This is a great beginners route.  Easy, but unasthetic climbing leading to a beautiful view at the top.",
+          "location" : "Located just to the right and around the corner from. Little Rebel Crack. .  In the notch between. Y-Crack wall. and. Coyote Tower. .  Easily located by the huge eye-bolt sticking out of the wall fifteen feet up.",
+          "protection" : "1 quick draw for obvious eye-bolt, small to medium gear, and a 48\" sling for the tree halfway up.",
+          "metadata_left_right_seq" : "18",
+          "metadata_parent_lnglat_0" : -90.01955,
+          "metadata_parent_lnglat_1" : 44.0442,
+          "metadata_parent_sector" : "Y-Crack Wall",
+          "metadata_mp_route_id" : "105867376",
+          "metadata_mp_sector_id" : "105730211"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "q1R1544BWwGzp2Kgp3aO",
+        "_score" : 10.359874,
+        "_ignored" : [
+          "description.keyword",
+          "location.keyword"
+        ],
+        "_source" : {
+          "route_name" : "Hell in a Bucket",
+          "grade_YDS" : "5.11a",
+          "grade_French" : "6c",
+          "grade_Ewbanks" : "22",
+          "grade_UIAA" : "VII+",
+          "grade_ZA" : "22",
+          "grade_British" : "E3 5c",
+          "safety" : "",
+          "type_sport" : true,
+          "fa" : "Steve Annecone and Lisa Montgomery",
+          "description" : "Hell in a Bucket offers super fun movement, buckets, and nice position on a slightly overhanging face. The crux is bouldery and comes early on. The climbing remains interesting all the way to the anchors. Finish with a beautiful, expansive view of Boulder Valley below.",
+          "location" : "Hell in a Bucket is located on the southeast corner of the Red Devil (on the far right side of the south face). It is downhill from. Hell Freezes Over. and. Paradise Lost. .. . Shade abounds at the base, so this route could potentially be climbed year round. Also, it is only about 2 minutes uphill from Der Zerkle.",
+          "protection" : "9 bolts and a 2 bolt anchor.",
+          "metadata_left_right_seq" : "4",
+          "metadata_parent_lnglat_0" : -105.289,
+          "metadata_parent_lnglat_1" : 39.9749,
+          "metadata_parent_sector" : "Red Devil",
+          "metadata_mp_route_id" : "112216228",
+          "metadata_mp_sector_id" : "105745432"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "TFR4544BWwGzp2KgsZ1r",
+        "_score" : 9.949177,
+        "_source" : {
+          "route_name" : "Sizzlin' Summer Solstice Spectacular",
+          "grade_YDS" : "5.10",
+          "grade_French" : "6b",
+          "grade_Ewbanks" : "20",
+          "grade_UIAA" : "VII-",
+          "grade_ZA" : "19",
+          "grade_British" : "E2 5b",
+          "safety" : "",
+          "type_sport" : true,
+          "fa" : "TJ & KS, 1997",
+          "description" : "On the right (eastern) wall, this is the obvious, beautiful arete in the center of the wall. Fun moves and great views will both keep you on your game.",
+          "location" : "From the western wall, head east and slightly down and around house boulders and back up to base of the eastern wall. Right of this climb is More Smiles for the Mile, 5.9, bolts & finger/hand gear.",
+          "protection" : "Bolts.",
+          "metadata_left_right_seq" : "5",
+          "metadata_parent_lnglat_0" : -108.86698,
+          "metadata_parent_lnglat_1" : 38.13084,
+          "metadata_parent_sector" : "Black Wall",
+          "metadata_mp_route_id" : "111313031",
+          "metadata_mp_sector_id" : "111312801"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "zVR0544BWwGzp2Kge2is",
+        "_score" : 9.871902,
+        "_source" : {
+          "route_name" : "Garden Path",
+          "grade_YDS" : "5.7",
+          "grade_French" : "5a",
+          "grade_Ewbanks" : "15",
+          "grade_UIAA" : "V+",
+          "grade_ZA" : "13",
+          "grade_British" : "MVS 4b",
+          "safety" : "",
+          "type_trad" : true,
+          "fa" : "unknown",
+          "description" : "This is a nice route but the gear is a little funky(Hard to place WELL). . But it has...Great location, Beautiful Views, & Sweet Climbing. What more could you want?",
+          "location" : "",
+          "protection" : "Placing gear before the roof creates a LOT of drag.... . ~SO~. . Be creative with your runners or go no gear till you get past the overhang",
+          "metadata_left_right_seq" : "2",
+          "metadata_parent_lnglat_0" : -89.73749,
+          "metadata_parent_lnglat_1" : 43.41896,
+          "metadata_parent_sector" : "Great Tower",
+          "metadata_mp_route_id" : "105730910",
+          "metadata_mp_sector_id" : "105730184"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "plRz544BWwGzp2KguF9S",
+        "_score" : 9.720898,
+        "_source" : {
+          "route_name" : "Lanky",
+          "grade_YDS" : "V2",
+          "grade_Font" : "5+",
+          "safety" : "",
+          "type_boulder" : true,
+          "fa" : "Mikel Cronin",
+          "description" : "Lanky follows up the arete of the tall boulder. This problem isn't climbed for being hard but more or less a mental challenge with beautiful views from the top and well climbing!",
+          "location" : "To the left of the Scenic Boulder. Very obvious boulder that sits right on the ridgeline of the Scenic Overlook.",
+          "protection" : "Couple of Pads will ease the mind",
+          "metadata_left_right_seq" : "999999",
+          "metadata_parent_lnglat_0" : -103.46855,
+          "metadata_parent_lnglat_1" : 43.89702,
+          "metadata_parent_sector" : "Lanky",
+          "metadata_mp_route_id" : "115361796",
+          "metadata_mp_sector_id" : "115361789"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "P1R4544BWwGzp2KgTphB",
+        "_score" : 9.030251,
+        "_ignored" : [
+          "location.keyword"
+        ],
+        "_source" : {
+          "route_name" : "Spartacus",
+          "grade_YDS" : "5.11b",
+          "grade_French" : "6c",
+          "grade_Ewbanks" : "23",
+          "grade_UIAA" : "VIII-",
+          "grade_ZA" : "23",
+          "grade_British" : "E3 5c",
+          "safety" : "",
+          "type_sport" : true,
+          "fa" : "unknown",
+          "description" : "Great moves, beautiful position, stellar views, and warm afternoon sun make this climb worthy of its namesake. A few easy clips up a slab warm you up for the technical stemming crux, just below an obvious horizontal, followed by a steep layback sequence.",
+          "location" : "This is currently the leftmost route on the East Side of the Arena (the right, west-facing, wall as you enter from below). Head down a few feet from the saddle between De Spectaculus Tower and East Side, and scramble up and right to the belay ledge below the first bolt.",
+          "protection" : "9 bolts to 2 bolt anchor. Optional 2\"-3\" cam(s) can be used to anchor the belayer at the ledge.",
+          "metadata_left_right_seq" : "0",
+          "metadata_parent_lnglat_0" : -105.10263,
+          "metadata_parent_lnglat_1" : 39.25668,
+          "metadata_parent_sector" : "East Side Wall",
+          "metadata_mp_route_id" : "107346466",
+          "metadata_mp_sector_id" : "109052292"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "71Rz544BWwGzp2KgZlvR",
+        "_score" : 8.868801,
+        "_ignored" : [
+          "description.keyword",
+          "location.keyword"
+        ],
+        "_source" : {
+          "route_name" : "Sex Never did this to my hands",
+          "grade_YDS" : "5.9",
+          "grade_French" : "5c",
+          "grade_Ewbanks" : "17",
+          "grade_UIAA" : "VI",
+          "grade_ZA" : "17",
+          "grade_British" : "HVS 5a",
+          "safety" : "",
+          "type_trad" : true,
+          "fa" : "Paul Piana, Paul Muehl & Bob Archbold  Sept 1, 1979",
+          "description" : "Sex Never Did This to My Hands, is a beautiful Diagonal Crack. Starts on the South East Corner of Vertigo View. Climb to an Overhang and then move left to the face and the Diagonal Crack. Deep Wide Arm Crack.. . Great Route that gives a challenge for both the lead and second. Fantastic Diagonal.. . MAKE SURE YOU TAPE UP FOR THIS ONE. THE NAME HAS A REASON BEHIND IT...",
+          "location" : "This route is located on the South East Corner of Vertigo View. When you are in the Outlets hike the trail that takes you to the North Side of the Inner Outlet. Past Classic Crack. From there the trail goes down a steep trail and Vertigo View is out your left (North Side of Trail). You can begin to see the Diagonal Crack moving up to the left. The Belay/start of the route is on the lower end of Vertigo View.",
+          "protection" : "You are going to need a lot of 2.5\" plus gear to send this route. Break out those Hexes and Big Bros for this one. It takes gear great I just needs to be large gear.",
+          "metadata_left_right_seq" : "2",
+          "metadata_parent_lnglat_0" : -103.56826,
+          "metadata_parent_lnglat_1" : 43.84839,
+          "metadata_parent_sector" : "Vertigo View",
+          "metadata_mp_route_id" : "107810730",
+          "metadata_mp_sector_id" : "106626052"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "RlRz544BWwGzp2KgPlr8",
+        "_score" : 8.661041,
+        "_ignored" : [
+          "description.keyword",
+          "location.keyword"
+        ],
+        "_source" : {
+          "route_name" : "Tasting Time",
+          "grade_YDS" : "5.10a",
+          "grade_French" : "6a",
+          "grade_Ewbanks" : "18",
+          "grade_UIAA" : "VI+",
+          "grade_ZA" : "18",
+          "grade_British" : "E1 5a",
+          "safety" : "",
+          "type_sport" : true,
+          "fa" : "Lee Terveen",
+          "description" : "A long, drawn out and very worth-while experience. This is a fabulous example of a classic canyon moderate line that will allow you to touch the sky. Enjoy as a warm-up. Intermediate climbers can expect to see their skills brought up to the next level of excellence on this one. Fun, thoughtful movement on varied holds leads to a view of one of the most beautiful vistas Spearfish Canyon has to offer.",
+          "location" : "5th route from the left on the left-most wall at the Indecent Exposure Crag. Just to the right of the black arete. Tasting Time is located on a black, slabby face that can be seen right away when one first hikes into the Indecent Exposure area. Start on some stoney steps to the left of a hillside that leads to another five ten known as Base Camp.",
+          "protection" : "Take at least a dozen draws, this route is really, really long. This route has open shuts.",
+          "metadata_left_right_seq" : "4",
+          "metadata_parent_lnglat_0" : -103.92064,
+          "metadata_parent_lnglat_1" : 44.34528,
+          "metadata_parent_sector" : "Indecent Exposure",
+          "metadata_mp_route_id" : "107089013",
+          "metadata_mp_sector_id" : "107088152"
+        }
+      }
+    ]
+  }
+}

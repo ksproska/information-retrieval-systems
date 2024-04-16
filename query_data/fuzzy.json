@@ -1,0 +1,24 @@
+{
+  "query": {
+    "bool": {
+      "should": [
+        {
+          "match": {
+            "description": {
+              "query": "beautiful",
+              "fuzziness": "AUTO"
+            }
+          }
+        },
+        {
+          "match": {
+            "description": {
+              "query": "view",
+              "fuzziness": "AUTO"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,274 @@
+{
+  "took" : 3,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 10000,
+      "relation" : "gte"
+    },
+    "max_score" : 9.477352,
+    "hits" : [
+      {
+        "_index" : "routes",
+        "_id" : "1VRx544BWwGzp2KgSUIK",
+        "_score" : 9.477352,
+        "_source" : {
+          "route_name" : "30.  Sexus (aka The Diagonal Crack)",
+          "grade_YDS" : "5.8",
+          "grade_French" : "5b",
+          "grade_Ewbanks" : "16",
+          "grade_UIAA" : "VI-",
+          "grade_ZA" : "15",
+          "grade_British" : "HVS 4c",
+          "safety" : "",
+          "type_trad" : true,
+          "fa" : "Equipped by P.P.",
+          "description" : "Climb the obvious diagonal crack for 40 feet, then head up a short, blocky face to a big pine tree on a ledge.. . Trad + chains on pine tree.",
+          "location" : "",
+          "protection" : "Trad, chain anchors on Pine tree.",
+          "metadata_left_right_seq" : "38",
+          "metadata_parent_lnglat_0" : -88.74034,
+          "metadata_parent_lnglat_1" : 46.66633,
+          "metadata_parent_sector" : "Main Wall",
+          "metadata_mp_route_id" : "114798490",
+          "metadata_mp_sector_id" : "118216685"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "aFR1544BWwGzp2Kgo3Ye",
+        "_score" : 9.285218,
+        "_ignored" : [
+          "description.keyword"
+        ],
+        "_source" : {
+          "route_name" : "NW Corner / Square Rock",
+          "grade_YDS" : "5.8",
+          "grade_French" : "5b",
+          "grade_Ewbanks" : "16",
+          "grade_UIAA" : "VI-",
+          "grade_ZA" : "15",
+          "grade_British" : "HVS 4c",
+          "safety" : "",
+          "type_trad" : true,
+          "fa" : "unknown",
+          "description" : "This route climbs the sharp NW corner of the rock (closer to the trail). A large tree is within inches of the rock and provides you with a variety of protection possibilites as well as a ladder for downclimb.. . If done treeless, the climb is 5.8, if using the tree for initial two moves the route is 5.5 (or T5 as Roach rates it).",
+          "location" : "",
+          "protection" : "Slings for tree branches.",
+          "metadata_left_right_seq" : "999999",
+          "metadata_parent_lnglat_0" : -105.2864,
+          "metadata_parent_lnglat_1" : 39.9746,
+          "metadata_parent_sector" : "Square Rock",
+          "metadata_mp_route_id" : "105758931",
+          "metadata_mp_sector_id" : "105744687"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "WVR4544BWwGzp2KgFJWx",
+        "_score" : 8.879336,
+        "_source" : {
+          "route_name" : "Backscratcher",
+          "grade_YDS" : "V1+",
+          "grade_Font" : "5",
+          "safety" : "",
+          "type_boulder" : true,
+          "fa" : "Alex Hesler",
+          "description" : "Climb the slab behind the big tree on nubbins and edges utilizing the arete out right if desired.",
+          "location" : "Around the corner south of. Ace's Arete. , it's behind the tree which begins the left edge of a \"corridor\" of boulders.",
+          "protection" : "Pads. The tree has your back....",
+          "metadata_left_right_seq" : "17",
+          "metadata_parent_lnglat_0" : -104.95638,
+          "metadata_parent_lnglat_1" : 38.929,
+          "metadata_parent_sector" : "Saddle, The",
+          "metadata_mp_route_id" : "118046057",
+          "metadata_mp_sector_id" : "118044326"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "R1Rw544BWwGzp2KgwTz2",
+        "_score" : 8.831802,
+        "_source" : {
+          "route_name" : "Once Knew A Boy From Oglesby",
+          "grade_YDS" : "V3",
+          "grade_Font" : "6A",
+          "safety" : "",
+          "type_boulder" : true,
+          "fa" : "AKS",
+          "description" : "Sit start on back left side of the left face of the prow. Work right toward the tree and then go to the top of the boulder.",
+          "location" : "Left of \"Once Knew A Girl From Oglesby\"",
+          "protection" : "Pad (don't hit the tree)",
+          "metadata_left_right_seq" : "11",
+          "metadata_parent_lnglat_0" : -89.0426,
+          "metadata_parent_lnglat_1" : 41.29838,
+          "metadata_parent_sector" : "A: Starting Area",
+          "metadata_mp_route_id" : "118202160",
+          "metadata_mp_sector_id" : "118064951"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "v1R0544BWwGzp2KgI2RR",
+        "_score" : 8.813642,
+        "_source" : {
+          "route_name" : "Sunset Ascent",
+          "grade_YDS" : "5.10a",
+          "grade_French" : "6a",
+          "grade_Ewbanks" : "18",
+          "grade_UIAA" : "VI+",
+          "grade_ZA" : "18",
+          "grade_British" : "E1 5a",
+          "safety" : "",
+          "type_sport" : true,
+          "fa" : "Connor Avery",
+          "description" : "Starts left around corner from Pine Tree Crack. Different style of climbing from many of the bolted routes at The Hollow. I believe it is harder than PWB Arete, But Easier than Pine Tree, so the rating could use some input.",
+          "location" : "",
+          "protection" : "Four Bolts, Sling anchors same as Pine Tree",
+          "metadata_left_right_seq" : "3",
+          "metadata_parent_lnglat_0" : -89.5005,
+          "metadata_parent_lnglat_1" : 43.9763,
+          "metadata_parent_sector" : "Hillbilly Routes",
+          "metadata_mp_route_id" : "108353235",
+          "metadata_mp_sector_id" : "106823886"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "fFRy544BWwGzp2KgFU2L",
+        "_score" : 8.75874,
+        "_source" : {
+          "route_name" : "Don't Blink",
+          "grade_YDS" : "5.7",
+          "grade_French" : "5a",
+          "grade_Ewbanks" : "15",
+          "grade_UIAA" : "V+",
+          "grade_ZA" : "13",
+          "grade_British" : "MVS 4b",
+          "safety" : "",
+          "type_trad" : true,
+          "fa" : "Sean Burns",
+          "description" : "Face climb to a ledge with a tree.  OK rock.",
+          "location" : "10 feet right of Freefall Cafe.  Starts right behind a tree.",
+          "protection" : "#3 or 3.5 camalot.  Rap off a tree.",
+          "metadata_left_right_seq" : "13",
+          "metadata_parent_lnglat_0" : -93.42333,
+          "metadata_parent_lnglat_1" : 38.25357,
+          "metadata_parent_sector" : "Washboard Area, The",
+          "metadata_mp_route_id" : "105899703",
+          "metadata_mp_sector_id" : "105899094"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "qFRy544BWwGzp2KgVlAR",
+        "_score" : 8.586257,
+        "_ignored" : [
+          "description.keyword"
+        ],
+        "_source" : {
+          "route_name" : "5.9 crack",
+          "grade_YDS" : "5.9",
+          "grade_French" : "5c",
+          "grade_Ewbanks" : "17",
+          "grade_UIAA" : "VI",
+          "grade_ZA" : "17",
+          "grade_British" : "HVS 5a",
+          "safety" : "",
+          "type_trad" : true,
+          "fa" : "unknown",
+          "description" : "This is the crackline left of the Rainy Day People, start on the scary looking flake (pull down) climb up to the small tree, head to the anchor tree of the 5.8 crack below the final pitch of The Meadows. Not very much pro past the small tree, but the climbing is easy.",
+          "location" : "",
+          "protection" : "Small cams, 1 bolt.  Anchor has cedar tree and one bolt.",
+          "metadata_left_right_seq" : "3",
+          "metadata_parent_lnglat_0" : -92.3771,
+          "metadata_parent_lnglat_1" : 38.7585,
+          "metadata_parent_sector" : "Meadows Area",
+          "metadata_mp_route_id" : "108299278",
+          "metadata_mp_sector_id" : "108299274"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "0lR1544BWwGzp2KgWHL6",
+        "_score" : 8.562464,
+        "_source" : {
+          "route_name" : "Swab The Deck",
+          "grade_YDS" : "5.10c",
+          "grade_French" : "6b",
+          "grade_Ewbanks" : "20",
+          "grade_UIAA" : "VII",
+          "grade_ZA" : "20",
+          "grade_British" : "E2 5b",
+          "safety" : "",
+          "type_sport" : true,
+          "fa" : "Joe Desmone & Jim Guerin, 1989",
+          "description" : "The steep opening moves form the crux (safer if you stick clip the 1st bolt), while the remainder of the climb is a continuous face climb on rounded edges and protruding pebbles.  Rappel from tree behind belay.",
+          "location" : "",
+          "protection" : "7 bolts to tree rappel.",
+          "metadata_left_right_seq" : "8",
+          "metadata_parent_lnglat_0" : -105.30141,
+          "metadata_parent_lnglat_1" : 39.98173,
+          "metadata_parent_sector" : "Main Cliffs, The",
+          "metadata_mp_route_id" : "105752104",
+          "metadata_mp_sector_id" : "105745184"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "GlR7544BWwGzp2KgV8C1",
+        "_score" : 8.4028,
+        "_source" : {
+          "route_name" : "West Face Left Side",
+          "grade_YDS" : "V0",
+          "grade_Font" : "4",
+          "safety" : "",
+          "type_boulder" : true,
+          "fa" : "unknown",
+          "description" : "Climb far left side of face behind tree. Can add a sit start to up the grade to V1-ish.",
+          "location" : "Far left side of west face, behind tree.",
+          "protection" : "Pad(s) and spotter for ground and tree.",
+          "metadata_left_right_seq" : "999999",
+          "metadata_parent_lnglat_0" : -107.55637,
+          "metadata_parent_lnglat_1" : 39.59605,
+          "metadata_parent_sector" : "Intimidator Boulder",
+          "metadata_mp_route_id" : "106453811",
+          "metadata_mp_sector_id" : "106432560"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "91R7544BWwGzp2Kg1MWH",
+        "_score" : 8.402762,
+        "_source" : {
+          "route_name" : "Three",
+          "grade_YDS" : "5.9-",
+          "grade_French" : "5c",
+          "grade_Ewbanks" : "17",
+          "grade_UIAA" : "VI",
+          "grade_ZA" : "16",
+          "grade_British" : "HVS 4c",
+          "safety" : "",
+          "type_trad" : true,
+          "type_tr" : true,
+          "fa" : "unknown",
+          "description" : "Climb the small roofs edge to the little, right-facing corner, and follow cracks to the tree. Walk off east.",
+          "location" : "Just a wee bit to the east of. Two. .",
+          "protection" : "Standard rack, tree for anchor, walk off east.",
+          "metadata_left_right_seq" : "2",
+          "metadata_parent_lnglat_0" : -105.22604,
+          "metadata_parent_lnglat_1" : 40.42152,
+          "metadata_parent_sector" : "Catch and Release Crag aka Montreat Crag",
+          "metadata_mp_route_id" : "106708121",
+          "metadata_mp_sector_id" : "106707818"
+        }
+      }
+    ]
+  }
+}
