@@ -7,7 +7,6 @@ create-index:
 load-data:
 	for file in ./movie_data/*; do \
   		curl -X POST -H "Content-Type: application/json" -d @$$file http://localhost:9200/movies/_doc ; \
-  		curl -X POST -H "Content-Type: application/json" -d @$$file http://localhost:9200/routes/_doc ; \
 	done
 
 	done
