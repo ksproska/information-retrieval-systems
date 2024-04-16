@@ -9,8 +9,6 @@ load-data:
   		curl -X POST -H "Content-Type: application/json" -d @$$file http://localhost:9200/movies/_doc ; \
 	done
 
-	done
-
 query-example:
 	curl -X GET "localhost:9200/routes/_search?pretty" -H 'Content-Type: application/json' \
 	-d' { "query": { "match": { "Overview": "women" } } }'
