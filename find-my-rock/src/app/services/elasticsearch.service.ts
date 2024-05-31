@@ -12,6 +12,10 @@ interface Filters {
   [key: string]: Filter;
 }
 
+interface Sorters {
+  [key: string]: any[];
+}
+
 
 @Injectable({
   providedIn: 'root'
@@ -34,6 +38,12 @@ export class ElasticsearchService {
     'snow': {term: {type_snow: true}},
     'alpine': {term: {type_alpine: true}}
   };
+
+  private sortDictionary: Sorters = {
+    'none': [],
+    'grade_asc': [{grade: {order: "asc"}}],
+    'grade_desc': [{grade: {order: "desc"}}]
+  }
 
   private yds_grades = [
     "3rd", "4th", "Easy 5th", "5.0", "5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "5.7", "5.7+", "5.8", "5.8-", "5.8+",
@@ -70,12 +80,13 @@ export class ElasticsearchService {
     typeNames: string[],
     yds_lower_grade: string,
     yds_upper_grade: string,
-    sector: string
+    sector: string = "",
+    sortName: string = "none"
   ): Observable<ElasticsearchResponse> {
     const headers = this.headers
     const filterObjects: Object[] = typeNames.map(filterName => this.typesDictionary[filterName]);
 
-    if (sector !== "" || sector !== null) {
+    if (sector !== "" && sector !== null) {
       const sectorFilter = {
         term: {
           "metadata_parent_sector.keyword": sector
@@ -90,21 +101,23 @@ export class ElasticsearchService {
       }
     }
     filterObjects.push(gradeFilter)
-
-    const body = {
-      query: {
-        bool: {
-          must: [
-            {
-              query_string: {
-                query: text,
-                default_operator: "AND"
-              }
-            },
-            ...filterObjects
-          ]
-        }
+    
+    const query = {
+      bool: {
+        must: [
+          {
+            query_string: {
+              query: text,
+              default_operator: "AND"
+            }
+          },
+          ...filterObjects
+        ]
       }
+    }
+    const body = {
+      query: query,
+      sort: this.sortDictionary[sortName]
     }
     return this.http.post<ElasticsearchResponse>(this.elasticsearchUrl, body, { headers });
   }
