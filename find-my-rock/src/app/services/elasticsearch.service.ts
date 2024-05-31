@@ -80,6 +80,8 @@ export class ElasticsearchService {
     typeNames: string[],
     yds_lower_grade: string,
     yds_upper_grade: string,
+    pageNumber: number = 1,
+    pageSize: number = 10,
     sector: string = "",
     sortName: string = "none"
   ): Observable<ElasticsearchResponse> {
@@ -101,7 +103,7 @@ export class ElasticsearchService {
       }
     }
     filterObjects.push(gradeFilter)
-    
+
     const query = {
       bool: {
         must: [
@@ -117,7 +119,9 @@ export class ElasticsearchService {
     }
     const body = {
       query: query,
-      sort: this.sortDictionary[sortName]
+      sort: this.sortDictionary[sortName],
+      "from": (pageNumber - 1) * pageSize,
+      "size": pageSize
     }
     return this.http.post<ElasticsearchResponse>(this.elasticsearchUrl, body, { headers });
   }
