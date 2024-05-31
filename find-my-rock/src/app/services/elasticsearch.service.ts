@@ -2,9 +2,10 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {ElasticsearchResponse} from "../models/elasticsearch-response";
+import {ElasticsearchResponseParentSector} from "../models/elasticsearch-response-parent-sector";
 
 interface Filter {
-  term: Record<string, boolean>;
+  term: Record<string, any>;
 }
 
 interface Filters {
@@ -36,9 +37,15 @@ export class ElasticsearchService {
 
   constructor(private readonly http: HttpClient) {}
 
-  searchInAllFieldsWithFilters(text: string, filters: string[]): Observable<ElasticsearchResponse> {
+  searchInAllFieldsWithFilters(text: string, filters: string[], sector: string): Observable<ElasticsearchResponse> {
     const headers = this.headers
     const filterObjects = filters.map(filterName => this.filters[filterName]);
+    const sectorFilter = {
+      term: {
+        "metadata_parent_sector.keyword": sector
+      }
+    }
+    filterObjects.push(sectorFilter)
     const body = {
       query: {
         bool: {
@@ -55,5 +62,40 @@ export class ElasticsearchService {
       }
     }
     return this.http.post<ElasticsearchResponse>(this.elasticsearchUrl, body, { headers });
+  }
+
+  getAllParentSectors(text: string, filters: string[]) {
+    const headers = this.headers
+    const filterObjects = filters.map(filterName => this.filters[filterName]);
+    const body = {
+      size: 10000,
+      query: {
+        bool: {
+          must: [
+            {
+              query_string: {
+                query: text,
+                default_operator: "AND"
+              }
+            },
+            ...filterObjects
+          ]
+        }
+      },
+      "_source": ["metadata_parent_sector"]
+    }
+    return new Promise((resolve, reject) => {
+      this.http.post<ElasticsearchResponseParentSector>(this.elasticsearchUrl, body, { headers }).subscribe(
+        response => {
+          const uniqueSectors = new Set();
+          response.hits.hits.forEach(hit => {
+            if (hit._source.metadata_parent_sector) {
+              uniqueSectors.add(hit._source.metadata_parent_sector);
+            }
+          });
+          resolve(Array.from(uniqueSectors));
+        }
+      );
+    });
   }
 }
