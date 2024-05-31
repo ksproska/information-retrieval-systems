@@ -1,2 +1,19 @@
-<p>main-page works!</p>
-<button class="btn btn-outline-secondary" routerLink="serp">Search</button>
+<div class="container mt-5 text-center">
+
+  <div class="mb-4">
+    <img alt="Logo" class="img-fluid" src="assets/logo.jpg" style="max-width: 150px;">
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="input-group">
+        <span class="input-group-text rounded-start-5 bg-white border-end-0" id="addon-loop">
+          <i class="bi bi-search fs-5"></i>
+        </span>
+        <input class="form-control rounded-end-5 border-start-0" placeholder="Short route with ..." type="text" aria-describedby="addon-loop">
+
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-outline-dark shadow fw-bold mt-3" routerLink="serp">Find</button>
+</div>
