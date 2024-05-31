@@ -67,26 +67,30 @@ export class ElasticsearchService {
 
   searchInAllFieldsWithFilters(
     text: string,
-    filters: string[],
-    sector: string,
+    typeNames: string[],
     yds_lower_grade: string,
-    yds_upper_grade: string
+    yds_upper_grade: string,
+    sector: string
   ): Observable<ElasticsearchResponse> {
     const headers = this.headers
-    const filterObjects: Object[] = filters.map(filterName => this.filters[filterName]);
-    const sectorFilter = {
-      term: {
-        "metadata_parent_sector.keyword": sector
+    const filterObjects: Object[] = typeNames.map(filterName => this.filters[filterName]);
+
+    if (sector !== "" || sector !== null) {
+      const sectorFilter = {
+        term: {
+          "metadata_parent_sector.keyword": sector
+        }
       }
+      filterObjects.push(sectorFilter)
     }
+
     const gradeFilter = {
       terms: {
         "grade_YDS.keyword": this.getGradesBetweenBounds(yds_lower_grade, yds_upper_grade)
       }
     }
-    console.log(gradeFilter)
-    filterObjects.push(sectorFilter)
     filterObjects.push(gradeFilter)
+
     const body = {
       query: {
         bool: {
@@ -105,9 +109,22 @@ export class ElasticsearchService {
     return this.http.post<ElasticsearchResponse>(this.elasticsearchUrl, body, { headers });
   }
 
-  getAllParentSectors(text: string, filters: string[]) {
+  getAllParentSectors(
+    text: string,
+    typeNames: string[],
+    yds_lower_grade: string,
+    yds_upper_grade: string,
+  ) {
     const headers = this.headers
-    const filterObjects = filters.map(filterName => this.filters[filterName]);
+    const filterObjects: Object[] = typeNames.map(filterName => this.filters[filterName]);
+
+    const gradeFilter = {
+      terms: {
+        "grade_YDS.keyword": this.getGradesBetweenBounds(yds_lower_grade, yds_upper_grade)
+      }
+    }
+    filterObjects.push(gradeFilter)
+
     const body = {
       size: 10000,
       query: {
