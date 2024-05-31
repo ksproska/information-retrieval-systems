@@ -1,12 +1,14 @@
-start-containers:
-	docker compose up -d
+start-elasticsearch:
+	docker compose up -d elasticsearch
 
 create-index:
 	curl -X PUT http://localhost:9200/routes
 
 load-data:
-	@for file in ./movie_data/*; do \
-  		curl -s -X POST -H "Content-Type: application/json" -d @$$file http://localhost:9200/routes/_doc > /dev/null 2>&1 ; \
+	@for file in ./elasticsearch_data/*; do \
+  		curl -s -o /dev/null -w "$$file: %{http_code}\n" \
+  		-H "Content-Type: application/x-ndjson" \
+  		--data-binary @$$file http://localhost:9200/routes/_bulk ; \
 	done
 
 run-test-queries:
