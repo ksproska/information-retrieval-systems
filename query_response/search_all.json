@@ -1,0 +1,295 @@
+{
+  "took" : 8,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 1648,
+      "relation" : "eq"
+    },
+    "max_score" : 9.506741,
+    "hits" : [
+      {
+        "_index" : "routes",
+        "_id" : "z2Xvyo8Bvc-n060UOLc0",
+        "_score" : 9.506741,
+        "_ignored" : [
+          "description.keyword"
+        ],
+        "_source" : {
+          "route_name" : "Kira, Get a Job!",
+          "grade_YDS" : "5.10+",
+          "grade_French" : "6b+",
+          "grade_Ewbanks" : "21",
+          "grade_UIAA" : "VII+",
+          "grade_ZA" : "20",
+          "grade_British" : "E3 5b",
+          "safety" : "",
+          "type_trad" : true,
+          "type_tr" : true,
+          "fa" : "Andrew Park, Christine Park",
+          "description" : "This has airy positioning to start the belay from. Move through some typical Unaweep bulges til you hit a ledge with a tree branch. Shuffle right on the plank til you reach a vertcal crack. Enjoy the not-so-staightforward crack all the way to the top. The route meanders a bit, but you will be following the path of least resistance.",
+          "location" : "The route is just climber's right of. Hans Landa. , but to access it, you will want to stand the southwest corner of the quarry. Look for the anchors around the blocks with the attached name tag. Do a single rope rap to the belay anchors down below.",
+          "protection" : "Doubles of 0.3-3 and (1) #4.",
+          "metadata_left_right_seq" : "1",
+          "metadata_parent_lnglat_0" : -108.57828,
+          "metadata_parent_lnglat_1" : 38.83316,
+          "metadata_parent_sector" : "Quarry Proper",
+          "metadata_mp_route_id" : "118884817",
+          "metadata_mp_sector_id" : "118791250"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "dmb1yo8Bvc-n060UCAEN",
+        "_score" : 9.093452,
+        "_source" : {
+          "route_name" : "Candelabrum-Hall of Flame",
+          "grade_YDS" : "5.11d",
+          "grade_French" : "7a",
+          "grade_Ewbanks" : "24",
+          "grade_UIAA" : "VIII",
+          "grade_ZA" : "25",
+          "grade_British" : "E5 6a",
+          "grade_yds_aid" : "A2",
+          "safety" : "",
+          "type_trad" : true,
+          "type_aid" : true,
+          "fa" : "Kyle Copeland, Alison Sheets, 1987.",
+          "description" : "This begins on the bench of Dewey Bridge Sandstone, at the far left-side of the West Face. The anchors can be seen from below.",
+          "location" : "",
+          "protection" : "Walk down Park Ave and it's on the right.",
+          "metadata_left_right_seq" : "999999",
+          "metadata_parent_lnglat_0" : -109.59939,
+          "metadata_parent_lnglat_1" : 38.6242,
+          "metadata_parent_sector" : "Park Avenue",
+          "metadata_mp_route_id" : "105954401",
+          "metadata_mp_sector_id" : "105717116"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "imXvyo8Bvc-n060UMrf9",
+        "_score" : 8.758293,
+        "_source" : {
+          "route_name" : "Weinersnitzel Lickin' Fingers",
+          "grade_YDS" : "5.10+",
+          "grade_French" : "6b+",
+          "grade_Ewbanks" : "21",
+          "grade_UIAA" : "VII+",
+          "grade_ZA" : "20",
+          "grade_British" : "E3 5b",
+          "safety" : "",
+          "type_trad" : true,
+          "type_tr" : true,
+          "fa" : "Andrew Park",
+          "description" : "Climb a wider pod start to a bit of fingers and techy feet.",
+          "location" : "This is the left crack when you are belaying from the base of the gully. There are belay anchors down below. Bring helmets as your friends are walking around up top kicking dirt and pebbles all on your dome.",
+          "protection" : "Singles 0.3-3.",
+          "metadata_left_right_seq" : "18",
+          "metadata_parent_lnglat_0" : -108.57828,
+          "metadata_parent_lnglat_1" : 38.83316,
+          "metadata_parent_sector" : "Quarry Proper",
+          "metadata_mp_route_id" : "118884734",
+          "metadata_mp_sector_id" : "118791250"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "0mXvyo8Bvc-n060UOLdx",
+        "_score" : 8.758293,
+        "_ignored" : [
+          "description.keyword",
+          "location.keyword"
+        ],
+        "_source" : {
+          "route_name" : "Hans Landa",
+          "grade_YDS" : "5.11",
+          "grade_French" : "6c+",
+          "grade_Ewbanks" : "23",
+          "grade_UIAA" : "VIII-",
+          "grade_ZA" : "23",
+          "grade_British" : "E4 5c",
+          "safety" : "",
+          "type_sport" : true,
+          "type_tr" : true,
+          "fa" : "Andrew Park",
+          "description" : "Start on moderate but smooth and techy bulges to gain the crack to the right. Work your way up the crack, and make a decision to either head straight up or to cut back to the orange face. Both are about the same grade, and each have bolts for protection. My opinion is that the left orange face is the money sequence. I won't spoil the beta. Be mega proud if you get the onsight!",
+          "location" : "See the topo on the Quarry Proper main page. This route can be accessed by rappelling one of the upper routes to get to the lower platform and continuing to the base of the route. Belay anchors and finishing anchors are there. It might be more comfortable to belay the second from Sauerkraut Sandwich. The anchors on the top of the route can be used if you want to swap leads.",
+          "protection" : "Bolts.",
+          "metadata_left_right_seq" : "2",
+          "metadata_parent_lnglat_0" : -108.57828,
+          "metadata_parent_lnglat_1" : 38.83316,
+          "metadata_parent_sector" : "Quarry Proper",
+          "metadata_mp_route_id" : "118882554",
+          "metadata_mp_sector_id" : "118791250"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "2WXvyo8Bvc-n060UOLfx",
+        "_score" : 8.758293,
+        "_source" : {
+          "route_name" : "Aldo the Apache",
+          "grade_YDS" : "5.11-",
+          "grade_French" : "6c",
+          "grade_Ewbanks" : "22",
+          "grade_UIAA" : "VIII+",
+          "grade_ZA" : "22",
+          "grade_British" : "E3 5c",
+          "safety" : "",
+          "type_sport" : true,
+          "fa" : "Andrew Park",
+          "description" : "Aldo the Apache is a roped boulder problem with a thin, reachy crux. A credit card sized hold may or may not have deteriorated over attempts. Get on it soon!",
+          "location" : "It is the arete on the southeast corner of the quarry. Rap in from anchors or carefully hike in and walk to the base of the route.",
+          "protection" : "4 Bolts.",
+          "metadata_left_right_seq" : "6",
+          "metadata_parent_lnglat_0" : -108.57828,
+          "metadata_parent_lnglat_1" : 38.83316,
+          "metadata_parent_sector" : "Quarry Proper",
+          "metadata_mp_route_id" : "118791359",
+          "metadata_mp_sector_id" : "118791250"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "WWXpyo8Bvc-n060U73Lg",
+        "_score" : 7.9454155,
+        "_source" : {
+          "route_name" : "Jurassic Park",
+          "grade_YDS" : "V2",
+          "grade_Font" : "5+",
+          "safety" : "",
+          "type_boulder" : true,
+          "fa" : "Tony Brengosz",
+          "description" : "Starts the same as for Pot Kettle Black, but instead of traversing right, continue straight up.",
+          "location" : "From the catacomb, continue walking south down the other side of the small hill.  You should pass two or three smaller boulders on your left, and after maybe 100 yards you'll see this boulder.. Jurassic Park is on the North Face.",
+          "protection" : "Pad",
+          "metadata_left_right_seq" : "999999",
+          "metadata_parent_lnglat_0" : -90.08896,
+          "metadata_parent_lnglat_1" : 43.05166,
+          "metadata_parent_sector" : "Group Camp G",
+          "metadata_mp_route_id" : "106449290",
+          "metadata_mp_sector_id" : "106402253"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "YGXnyo8Bvc-n060UulWv",
+        "_score" : 7.9454155,
+        "_source" : {
+          "route_name" : "Park Bench",
+          "grade_YDS" : "5.7",
+          "grade_French" : "5a",
+          "grade_Ewbanks" : "15",
+          "grade_UIAA" : "V+",
+          "grade_ZA" : "13",
+          "grade_British" : "MVS 4b",
+          "safety" : "",
+          "type_trad" : true,
+          "type_tr" : true,
+          "fa" : "unknown",
+          "description" : "Face and chimney on the left side of south face.",
+          "location" : "",
+          "protection" : "TR or big gear",
+          "metadata_left_right_seq" : "999999",
+          "metadata_parent_lnglat_0" : -96.17979,
+          "metadata_parent_lnglat_1" : 43.7028,
+          "metadata_parent_sector" : "Hidden Buttress",
+          "metadata_mp_route_id" : "106848057",
+          "metadata_mp_sector_id" : "106848053"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "ZmXmyo8Bvc-n060U2Eqw",
+        "_score" : 7.9454155,
+        "_source" : {
+          "route_name" : "Park Avenue",
+          "grade_YDS" : "5.6",
+          "grade_French" : "4c",
+          "grade_Ewbanks" : "14",
+          "grade_UIAA" : "V",
+          "grade_ZA" : "12",
+          "grade_British" : "S 4b",
+          "safety" : "",
+          "type_trad" : true,
+          "type_tr" : true,
+          "fa" : "unknown",
+          "description" : "beta pending",
+          "location" : "beta pending",
+          "protection" : "beta pending",
+          "metadata_left_right_seq" : "6",
+          "metadata_parent_lnglat_0" : -90.15572,
+          "metadata_parent_lnglat_1" : 42.12393,
+          "metadata_parent_sector" : "C: Sun Buttress",
+          "metadata_mp_route_id" : "115363300",
+          "metadata_mp_sector_id" : "115363124"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "TWXsyo8Bvc-n060UmpUh",
+        "_score" : 7.9454155,
+        "_ignored" : [
+          "location.keyword"
+        ],
+        "_source" : {
+          "route_name" : "Central Park",
+          "grade_YDS" : "5.7",
+          "grade_French" : "5a",
+          "grade_Ewbanks" : "15",
+          "grade_UIAA" : "V+",
+          "grade_ZA" : "13",
+          "grade_British" : "MVS 4b",
+          "safety" : "PG",
+          "type_trad" : true,
+          "fa" : "Joe Huggins, Mike Brooks, Jim Stuberg, 1981",
+          "description" : "Climb past two trees in right angling cracks to a manky roof. Climb through the roof on the left aiming for the top to the left of a small tower.",
+          "location" : "Follow Hawk Eagle Ridge approach to the top of the formation, just past a slabby drainage scramble. As you turn the corner above the class 3 slabs, the low angle face with many trees and this route comes into view. Follow the trail another 100 feet directly to the start. Descend by rappelling off trees or walking around the north end of the ridge.",
+          "protection" : "Standard rack. Roof at top is manky.",
+          "metadata_left_right_seq" : "4",
+          "metadata_parent_lnglat_0" : -105.2879,
+          "metadata_parent_lnglat_1" : 39.9314,
+          "metadata_parent_sector" : "Hawk-Eagle Ridge",
+          "metadata_mp_route_id" : "106935495",
+          "metadata_mp_sector_id" : "105745073"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "OmXryo8Bvc-n060UJoKi",
+        "_score" : 7.9454155,
+        "_ignored" : [
+          "description.keyword"
+        ],
+        "_source" : {
+          "route_name" : "Jurassic Park",
+          "grade_YDS" : "5.13",
+          "grade_French" : "8a",
+          "grade_Ewbanks" : "29",
+          "grade_UIAA" : "X-",
+          "grade_ZA" : "30",
+          "grade_British" : "E7 6c",
+          "safety" : "",
+          "type_sport" : true,
+          "fa" : "unknown",
+          "description" : "This is the incredible feat of \"sending\" all five of the sport routes on the popular north face of dinosaur rock in a single day. This includes from left to right:. Pretty in Pinkler. ,. The Shaft. ,. Patience Face. ,. Milkbone. , and. Ultrasaurus. .. . I know my buddy Bart \"the Crusher\" Paul did it way back in the day, but I am not sure if anyone else has. I'm assuming some of the prolific Flatiron's route developers such as Matt Samet have done this as well, but I am not really sure? Candidates for sending Jurassic Park should be really strong, really fit, or have the routes on total lockdown. I think this feat is rad enough that it merits a designation on Mountainproject. Fitness is the name of the game for Jurassic Park. Given that 4 of the 5 climbs are roughly 100 feet long, are pumpy, and all have redpoint cruxes near the top, I think doing all of them clean in a day is quite a challenge. My buddy Chris Taylor who was also trying to do \"Dino in a Day\" coined the term Jurassic Park, and it just kind of stuck. I would love to hear from others in the climbing community who have done this or tried. It would be very interesting to hear who did this first and what year it was. It's hard to quantify the difficulty of this accomplishment, but I would say that sending all 5 routes is somewhere in the solid 5.13 realm.. . Nonetheless, Jurassic Park should be on every strong climbers tick list! Enjoy the challenge, and don't get too pumped....",
+          "location" : "This is on the North side of Dinosaur Rock.",
+          "protection" : "Fixed anchors - lots and lots of bolts.. . Bring every quickdraw you own, and maybe borrow all your friends draws as well. You get extra credit for making people carry your 15 lb. sling of draws up to the crag.",
+          "metadata_left_right_seq" : "10",
+          "metadata_parent_lnglat_0" : -105.2875,
+          "metadata_parent_lnglat_1" : 39.9734,
+          "metadata_parent_sector" : "Dinosaur Rock",
+          "metadata_mp_route_id" : "108933364",
+          "metadata_mp_sector_id" : "105745684"
+        }
+      }
+    ]
+  }
+}

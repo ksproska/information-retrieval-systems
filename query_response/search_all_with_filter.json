@@ -1,0 +1,251 @@
+{
+  "took" : 7,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 8,
+      "relation" : "eq"
+    },
+    "max_score" : 5.398514,
+    "hits" : [
+      {
+        "_index" : "routes",
+        "_id" : "zGXnyo8Bvc-n060Uh1KF",
+        "_score" : 5.398514,
+        "_source" : {
+          "route_name" : "Teabag",
+          "grade_YDS" : "5.10a",
+          "grade_French" : "6a",
+          "grade_Ewbanks" : "18",
+          "grade_UIAA" : "VI+",
+          "grade_ZA" : "18",
+          "grade_British" : "E1 5a",
+          "safety" : "",
+          "type_tr" : true,
+          "type_boulder" : true,
+          "type_ice" : true,
+          "fa" : "Phil Huston",
+          "description" : "slight overhanging arete with small finger crack. try it without a rope and hope you don't s--- your pants. Sandy bottom.",
+          "location" : "Silver Bay, Eleanor's roadside crag. North Shore Adventure Park",
+          "protection" : "You can lead this short route with small micro cam's or nuts.",
+          "metadata_left_right_seq" : "999999",
+          "metadata_parent_lnglat_0" : -91.25843,
+          "metadata_parent_lnglat_1" : 47.28388,
+          "metadata_parent_sector" : "Silver Bay, Eleanor Road Side Crag",
+          "metadata_mp_route_id" : "113454032",
+          "metadata_mp_sector_id" : "113427740"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "W2Xnyo8Bvc-n060ULE7D",
+        "_score" : 3.406852,
+        "_source" : {
+          "route_name" : "Stepping out on your Ass",
+          "grade_YDS" : "5.11+",
+          "grade_French" : "7a",
+          "grade_Ewbanks" : "24",
+          "grade_UIAA" : "VIII",
+          "grade_ZA" : "24",
+          "grade_British" : "E4 6a",
+          "safety" : "",
+          "type_tr" : true,
+          "type_boulder" : true,
+          "fa" : "Project",
+          "description" : "Start with Astral projection then connect with stepping out to finish",
+          "location" : "Same start holds as rocket man",
+          "protection" : "",
+          "metadata_left_right_seq" : "60",
+          "metadata_parent_lnglat_0" : -84.75339,
+          "metadata_parent_lnglat_1" : 42.75784,
+          "metadata_parent_sector" : "Grand Ledge (aka Oak Park)",
+          "metadata_mp_route_id" : "119344091",
+          "metadata_mp_sector_id" : "105934381"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "ZGXnyo8Bvc-n060ULU57",
+        "_score" : 3.406852,
+        "_ignored" : [
+          "description.keyword"
+        ],
+        "_source" : {
+          "route_name" : "Rathke's Roof",
+          "grade_YDS" : "5.13a",
+          "grade_French" : "7c+",
+          "grade_Ewbanks" : "29",
+          "grade_UIAA" : "IX+",
+          "grade_ZA" : "29",
+          "grade_British" : "E6 6c",
+          "safety" : "",
+          "type_tr" : true,
+          "type_boulder" : true,
+          "fa" : "",
+          "description" : "Start as Up Yours Direct:. Start low with feet on bare rock surrounded by moss. Continue straight up the left side of the dihedral face, tending more left than straight up. The roof has some absolutely blind reaches to two finger pockets.. . This climb might be extremely reach dependent.",
+          "location" : "",
+          "protection" : "Top rope from Doug's roof is fine.",
+          "metadata_left_right_seq" : "49",
+          "metadata_parent_lnglat_0" : -84.75339,
+          "metadata_parent_lnglat_1" : 42.75784,
+          "metadata_parent_sector" : "Grand Ledge (aka Oak Park)",
+          "metadata_mp_route_id" : "118083155",
+          "metadata_mp_sector_id" : "105934381"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "kGXnyo8Bvc-n060UME70",
+        "_score" : 3.406852,
+        "_source" : {
+          "route_name" : "Doug’s Cow",
+          "grade_YDS" : "5.11c/d",
+          "grade_French" : "7a",
+          "grade_Ewbanks" : "24",
+          "grade_UIAA" : "VIII",
+          "grade_ZA" : "25",
+          "grade_British" : "E4 6a",
+          "safety" : "PG",
+          "type_tr" : true,
+          "type_boulder" : true,
+          "fa" : "August 8, 2020",
+          "description" : "Start by doing the low boulder start of Cowabunga then traverse at flake left till you meet Doug’s then finish it on Doug’s roof",
+          "location" : "Left of Rocket, to right of Intimidator",
+          "protection" : "Slings",
+          "metadata_left_right_seq" : "56",
+          "metadata_parent_lnglat_0" : -84.75339,
+          "metadata_parent_lnglat_1" : 42.75784,
+          "metadata_parent_sector" : "Grand Ledge (aka Oak Park)",
+          "metadata_mp_route_id" : "119351511",
+          "metadata_mp_sector_id" : "105934381"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "lGXnyo8Bvc-n060UMU5G",
+        "_score" : 3.406852,
+        "_source" : {
+          "route_name" : "Despondecy Direct Natural",
+          "grade_YDS" : "5.12",
+          "grade_French" : "7b+",
+          "grade_Ewbanks" : "27",
+          "grade_UIAA" : "VIII+",
+          "grade_ZA" : "26",
+          "grade_British" : "E6 6b",
+          "safety" : "",
+          "type_tr" : true,
+          "type_boulder" : true,
+          "fa" : "unknown",
+          "description" : "Low crux boulder problem using non-manufactured holds. The big slot, and the small slot are off.. . Drop off at the jug after the crimps, or continue up past another crux to easier climbing above.",
+          "location" : "To the left of the staircase blocks leading up an open book corner. This is The Tooth V1 area.",
+          "protection" : "top rope, or boulder pads",
+          "metadata_left_right_seq" : "65",
+          "metadata_parent_lnglat_0" : -84.75339,
+          "metadata_parent_lnglat_1" : 42.75784,
+          "metadata_parent_sector" : "Grand Ledge (aka Oak Park)",
+          "metadata_mp_route_id" : "118083103",
+          "metadata_mp_sector_id" : "105934381"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "3GXryo8Bvc-n060UH4FV",
+        "_score" : 3.2207463,
+        "_source" : {
+          "route_name" : "North fin arete",
+          "grade_YDS" : "5.6",
+          "grade_French" : "4c",
+          "grade_Ewbanks" : "14",
+          "grade_UIAA" : "V",
+          "grade_ZA" : "12",
+          "grade_British" : "S 4b",
+          "safety" : "",
+          "type_tr" : true,
+          "type_boulder" : true,
+          "fa" : "unknown",
+          "description" : "The crux would be the SDS if you were to choose to do so.  Ascend the ~80 degree angle on solid pebbles and sandy, deteriorating cracks. Perhaps a safer yet harder problem could be found using only the pebbles....",
+          "location" : "This is the northern-most route at the Red Rocks; either begin at Settler's Park and follow the trail all the way around, or start at the Mt. Sanitas side and head West on the wraparound trail.",
+          "protection" : "Crash pad.",
+          "metadata_left_right_seq" : "4",
+          "metadata_parent_lnglat_0" : -105.29671,
+          "metadata_parent_lnglat_1" : 40.01742,
+          "metadata_parent_sector" : "Red Rocks (Boulder)",
+          "metadata_mp_route_id" : "108082258",
+          "metadata_mp_sector_id" : "105746418"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "kmXqyo8Bvc-n060UCHMz",
+        "_score" : 2.7472708,
+        "_ignored" : [
+          "protection.keyword",
+          "description.keyword",
+          "location.keyword"
+        ],
+        "_source" : {
+          "route_name" : "Is the Route Included in the Price of the Condo?",
+          "grade_YDS" : "5.8",
+          "grade_French" : "5b",
+          "grade_Ewbanks" : "16",
+          "grade_UIAA" : "VI-",
+          "grade_ZA" : "15",
+          "grade_British" : "HVS 4c",
+          "safety" : "PG",
+          "type_trad" : true,
+          "type_tr" : true,
+          "type_boulder" : true,
+          "fa" : "unknown",
+          "description" : "This route consists of large, rectangular limestone blocks laid in a brick pattern. The wall encloses the recreational path (Oak Leaf Trail) running through the east side, and aids in supporting the Lafayette Ave bridge. The route is just north of the bridge, on the east side of the recreational corridor. The wall is dirty & crumbly in some areas so test your holds before pulling or stepping up on them. The whole climb is simply a series of awkward jugs, large, crimp-friendly slopers, or vertical cracks between blocks. There's no true crux to speak of; the climb is consistent from base to summit.. . Unless you're bouldering, be aware that you may look suspicious fooling around in the bushes while you're setting your anchors, so be cautious. This is a high-traffic area, so expect numerous passers-by, both from above and below. Comments and an audience, if only for brief moments at a time - especially from the residents of the twin-tower Park Lafayette residence opposite the bike trail - are not uncommon.. . Bring a towel to dry your climbing shoes prior to starting the route. The base lies in some tall grass, and water often seeps out of the wall and puddles just to the south, under the bridge.",
+          "location" : "The summit is on Summit Ave. Was it meant to be? I like to think so.. . . Click to view location. . . See the link in the Protection section below, or zoom in & use google maps' \"Street View\" tool to view this location at ground level. Look west. As Summit approaches Lafayette to the south, you'll see the Summit Ave sidewalk bordered by a concrete wall. On the other side of this wall is a drop-off to the recreational trail below. Just north of this concrete wall, and as visible in Street View, is a wood-log fence. Behind this fence is a small grass patch at the top of the route. Here's where you'll set your anchors and rappel down to begin your climb.. . If bouldering instead, one can enter the rec. trail any number of places. At the intersection of Oakland & North is an access ramp. There's another between Farwell & Prospect Avenues, between the two buildings composing UWM's Kenilworth Square Apts (the building containing Toppers, American Apparel, and Urban Outfitters). Any avid biker in Milwaukee *should* be very familiar with this rec. trail.",
+          "protection" : "As noted in the \"Summit & Lafayette\" area comments, one can - and is encouraged to - create an anchor point. HERE. . . Using the fence posts and/or tree trunks located here, create two anchor points with your carabiner meeting at the wall's edge. This wall can be top-roped from this anchor point, or lead and trad-climbed, finishing at this small patch of grass at the top of the route.. . If you're bouldering, bring multiple pads and expect some scrapes in the event of a fall. The wall is at a slight, near-vertical incline - maybe 95 degrees from the ground - so any fall without a rope could result in both sliding down and bouncing off of the wall.",
+          "metadata_left_right_seq" : "999999",
+          "metadata_parent_lnglat_0" : -87.88611,
+          "metadata_parent_lnglat_1" : 43.056,
+          "metadata_parent_sector" : "Lafayette & Summit",
+          "metadata_mp_route_id" : "107757441",
+          "metadata_mp_sector_id" : "105794824"
+        }
+      },
+      {
+        "_index" : "routes",
+        "_id" : "G2Xtyo8Bvc-n060UzqUO",
+        "_score" : 1.2672822,
+        "_ignored" : [
+          "protection.keyword",
+          "description.keyword",
+          "location.keyword"
+        ],
+        "_source" : {
+          "route_name" : "Smoke a Fatty",
+          "grade_YDS" : "5.10b",
+          "grade_French" : "6a+",
+          "grade_Ewbanks" : "19",
+          "grade_UIAA" : "VII-",
+          "grade_ZA" : "19",
+          "grade_British" : "E2 5b",
+          "safety" : "",
+          "type_trad" : true,
+          "type_tr" : true,
+          "type_boulder" : true,
+          "fa" : "Dave and Chris Bell, mid 1970s?",
+          "description" : "This is a short but powerful dihedral crack that is an OW. Vertical if not slightly overhung. Starts as fists, if I remember right, then goes to wide fists and armbars at the crux (near the top out), stem out to the thin crack at the crux with your left foot.. . I lead it on gear last summer trying to find A-hole rock. It's pretty stout for sure.",
+          "location" : "Continue down 550 past. de Gaulles Nose. for a while, there is a large parking area that is surrounded by cable on your right (close to the Gnome Dome), park there.  Follow the bike trail across the street up towards A-hole rock (stay left at the split and you will pass some rocks on your left shortly which have maybe 2-3 boulderable cracks), you will eventually make out a super faint clearing just off the trail to your right (a bit further down the trail) that was actually once an old road, follow it up the hill to the ridge line. Follow the ridge until you find the boulder pictured the problem faces A-hole, so you won't see it at first just check all the boulders on the ridge if you can't figure it out. It's maybe 1/3 to 1/2 way to A-hole rock.",
+          "protection" : "Large cams mostly, you can use some smaller stuff for the anchor up top. Doubles in the #3-5 Camalot range would be useful, don't remember if I used my #6 or not but maybe bring it just in case.  If you plan to boulder this thing, bring about 5 pads or maybe more, as there are a few large rocks in the landing and a fire ring as well.",
+          "metadata_left_right_seq" : "999999",
+          "metadata_parent_lnglat_0" : -105.26026,
+          "metadata_parent_lnglat_1" : 39.37837,
+          "metadata_parent_sector" : "Obscure Buffalo Creek Rocks",
+          "metadata_mp_route_id" : "106242621",
+          "metadata_mp_sector_id" : "106017554"
+        }
+      }
+    ]
+  }
+}

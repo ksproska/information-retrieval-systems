@@ -3,6 +3,15 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {ElasticsearchResponse} from "../models/elasticsearch-response";
 
+interface Filter {
+  term: Record<string, boolean>;
+}
+
+interface Filters {
+  [key: string]: Filter;
+}
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -13,20 +22,38 @@ export class ElasticsearchService {
     'Accept': 'application/json'
   });
 
-  constructor(private readonly http: HttpClient) {
-  }
+  private filters: Filters = {
+    'boulder': {term: {type_boulder: true}},
+    'tr': {term: {type_tr: true}},
+    'sport': {term: {type_sport: true}},
+    'trad': {term: {type_trad: true}},
+    'aid': {term: {type_aid: true}},
+    'ice': {term: {type_ice: true}},
+    'mixed': {term: {type_mixed: true}},
+    'snow': {term: {type_snow: true}},
+    'alpine': {term: {type_alpine: true}}
+  };
 
-  searchInAllFields(text: string): Observable<ElasticsearchResponse> {
+  constructor(private readonly http: HttpClient) {}
+
+  searchInAllFieldsWithFilters(text: string, filters: string[]): Observable<ElasticsearchResponse> {
     const headers = this.headers
+    const filterObjects = filters.map(filterName => this.filters[filterName]);
     const body = {
       query: {
-        query_string: {
-          query: text,
-          default_operator: "AND"
+        bool: {
+          must: [
+            {
+              query_string: {
+                query: text,
+                default_operator: "AND"
+              }
+            },
+            ...filterObjects
+          ]
         }
       }
-    };
-
+    }
     return this.http.post<ElasticsearchResponse>(this.elasticsearchUrl, body, { headers });
   }
 }
