@@ -8,19 +8,20 @@ import {ElasticsearchResponse} from "../models/elasticsearch-response";
 })
 export class ElasticsearchService {
   private elasticsearchUrl = 'http://localhost:9200/routes/_search';
+  private headers = new HttpHeaders({
+    'Content-Type': 'application/json',
+    'Accept': 'application/json'
+  });
+
   constructor(private readonly http: HttpClient) {
   }
 
-  searchInElasticsearch(query: string): Observable<ElasticsearchResponse> {
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Accept': 'application/json'
-    });
-
+  searchInAllFields(text: string): Observable<ElasticsearchResponse> {
+    const headers = this.headers
     const body = {
       query: {
         query_string: {
-          query: query,
+          query: text,
           default_operator: "AND"
         }
       }
