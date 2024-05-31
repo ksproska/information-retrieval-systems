@@ -23,7 +23,7 @@ export class ElasticsearchService {
     'Accept': 'application/json'
   });
 
-  private filters: Filters = {
+  private typesDictionary: Filters = {
     'boulder': {term: {type_boulder: true}},
     'tr': {term: {type_tr: true}},
     'sport': {term: {type_sport: true}},
@@ -73,7 +73,7 @@ export class ElasticsearchService {
     sector: string
   ): Observable<ElasticsearchResponse> {
     const headers = this.headers
-    const filterObjects: Object[] = typeNames.map(filterName => this.filters[filterName]);
+    const filterObjects: Object[] = typeNames.map(filterName => this.typesDictionary[filterName]);
 
     if (sector !== "" || sector !== null) {
       const sectorFilter = {
@@ -116,7 +116,7 @@ export class ElasticsearchService {
     yds_upper_grade: string,
   ) {
     const headers = this.headers
-    const filterObjects: Object[] = typeNames.map(filterName => this.filters[filterName]);
+    const filterObjects: Object[] = typeNames.map(filterName => this.typesDictionary[filterName]);
 
     const gradeFilter = {
       terms: {
