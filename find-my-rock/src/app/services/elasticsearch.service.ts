@@ -58,6 +58,14 @@ export class ElasticsearchService {
     "V12-13", "V13", "V13-", "V13+", "V13-14", "V14", "V14+", "V14-15", "V15", "V16", "V16-", "V17", "V?"
   ]
 
+  getAllTypeNames() {
+    return Object.keys(this.typesDictionary);
+  }
+
+  getAllGradeNamesInOrderEasiestToHardest() {
+    return this.yds_grades;
+  }
+
   getGradesBetweenBounds(lowerBound: string, upperBound: string) {
     const startIndex = this.yds_grades.indexOf(lowerBound);
     const endIndex = this.yds_grades.indexOf(upperBound);
