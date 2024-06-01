@@ -14,10 +14,15 @@
       <div class="row justify-content-center mt-3">
         <div class="col-md-10">
           <div class="input-group shadow rounded-5">
-            <span class="input-group-text rounded-start-5 bg-white border-end-0" id="addon-loop">
-              <i class="bi bi-search fs-5"></i>
-            </span>
-            <input class="form-control rounded-end-5 border-start-0" placeholder="Short route with ..." type="text" aria-describedby="addon-loop">
+        <span class="input-group-text rounded-start-5 bg-white border-end-0" id="addon-loop">
+          <i class="bi bi-search fs-5"></i>
+        </span>
+            <input class="form-control rounded-end-5 border-start-0"
+                   placeholder="Short route with ..."
+                   type="text"
+                   aria-describedby="addon-loop"
+                   [(ngModel)]="query"
+            >
           </div>
         </div>
       </div>
