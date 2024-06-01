@@ -77,9 +77,9 @@ export class ElasticsearchService {
 
   searchInAllFieldsWithFilters(
     text: string,
-    typeNames: string[],
-    yds_lower_grade: string,
-    yds_upper_grade: string,
+    typeNames: string[] = [],
+    yds_lower_grade: string = "3rd",
+    yds_upper_grade: string = "V?",
     pageNumber: number = 1,
     pageSize: number = 10,
     sector: string = "",
