@@ -34,10 +34,14 @@
               <span class="input-group-text w-25 rounded-start-5 bg-white border-end-0" id="addon-sort">
                 Sort:
               </span>
-              <select class="form-select-sm rounded-start-0 rounded-end-5 w-75 text-secondary border-start-0 border-secondary border-opacity-25" aria-describedby="addon-sort">
-                <option value="" class="text-dark" selected>Best match</option>
-                <option value="" class="text-dark">Difficulty: lowest first</option>
-                <option value="" class="text-dark">Difficulty: highest first</option>
+              <select
+                class="form-select-sm rounded-start-0 rounded-end-5 w-75 text-secondary border-start-0 border-secondary border-opacity-25"
+                aria-describedby="addon-sort"
+                [(ngModel)]="selectedSort"
+                (ngModelChange)="updateSearch()">
+                <option value="none" class="text-dark" selected>Best match</option>
+                <option value="grade_asc" class="text-dark">Difficulty: lowest first</option>
+                <option value="grade_desc" class="text-dark">Difficulty: highest first</option>
               </select>
             </div>
           </div>
