@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "elasticsearch docker container starting..."
-docker compose up -d elasticsearch
+docker compose -f docker-compose.yaml up -d elasticsearch
 
 echo "creating index..."
 sleep 15
