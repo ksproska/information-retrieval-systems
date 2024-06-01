@@ -22,6 +22,7 @@
                    type="text"
                    aria-describedby="addon-loop"
                    [(ngModel)]="query"
+                   (keydown.enter)="updateSearch()"
             >
           </div>
         </div>
