@@ -1,5 +1,5 @@
 start-elasticsearch:
-	docker compose up -d elasticsearch
+	docker compose -f docker-compose.yaml up -d elasticsearch
 
 create-index:
 	curl -X PUT http://localhost:9200/routes
