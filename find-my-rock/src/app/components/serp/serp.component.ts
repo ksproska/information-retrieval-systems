@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { FormsModule } from "@angular/forms";
-import { ElasticsearchService } from "../../services/elasticsearch.service";
-import { JsonPipe, NgIf } from "@angular/common";
+import {Component} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {FormsModule} from "@angular/forms";
+import {ElasticsearchService} from "../../services/elasticsearch.service";
+import {JsonPipe, NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-serp',
@@ -30,6 +30,7 @@ export class SerpComponent {
 
   allTypeNames: string[];
   allGradeNamesInOrderEasiestToHardest: string[]
+  allParentSectorsForFilters: string[] | undefined
 
   constructor(private route: ActivatedRoute, private elasticsearchService: ElasticsearchService) {
     this.allTypeNames = elasticsearchService.getAllTypeNames();
@@ -58,5 +59,19 @@ export class SerpComponent {
         this.errorMessage = 'Search error: ' + error.message;
       }
     });
+    this.elasticsearchService.getAllParentSectors(
+      this.query,
+      this.typeNames,
+      this.ydsLowerGrade,
+      this.ydsUpperGrade
+    ).subscribe({
+        next: (response) => {
+          this.allParentSectorsForFilters = response;
+        },
+        error: (error) => {
+          this.errorMessage = 'Search error for parent sectors search: ' + error.message;
+        }
+      }
+    );
   }
 }

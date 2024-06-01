@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {map, Observable} from "rxjs";
 import {ElasticsearchResponse} from "../models/elasticsearch-response";
 import {ElasticsearchResponseParentSector} from "../models/elasticsearch-response-parent-sector";
 
@@ -136,19 +136,19 @@ export class ElasticsearchService {
 
   getAllParentSectors(
     text: string,
-    typeNames: string[],
-    yds_lower_grade: string,
-    yds_upper_grade: string,
+    typeNames: string[] = [],
+    yds_lower_grade: string = "3rd",
+    yds_upper_grade: string = "V?"
   ) {
-    const headers = this.headers
+    const headers = this.headers;
     const filterObjects: Object[] = typeNames.map(filterName => this.typesDictionary[filterName]);
 
     const gradeFilter = {
       terms: {
         "grade_YDS.keyword": this.getGradesBetweenBounds(yds_lower_grade, yds_upper_grade)
       }
-    }
-    filterObjects.push(gradeFilter)
+    };
+    filterObjects.push(gradeFilter);
 
     const body = {
       size: 10000,
@@ -166,19 +166,18 @@ export class ElasticsearchService {
         }
       },
       "_source": ["metadata_parent_sector"]
-    }
-    return new Promise((resolve, reject) => {
-      this.http.post<ElasticsearchResponseParentSector>(this.elasticsearchUrl, body, { headers }).subscribe(
-        response => {
-          const uniqueSectors = new Set();
-          response.hits.hits.forEach(hit => {
-            if (hit._source.metadata_parent_sector) {
-              uniqueSectors.add(hit._source.metadata_parent_sector);
-            }
-          });
-          resolve(Array.from(uniqueSectors));
-        }
-      );
-    });
+    };
+
+    return this.http.post<ElasticsearchResponseParentSector>(this.elasticsearchUrl, body, { headers }).pipe(
+      map(response => {
+        const uniqueSectors = new Set<string>();
+        response.hits.hits.forEach(hit => {
+          if (hit._source && hit._source.metadata_parent_sector) {
+            uniqueSectors.add(hit._source.metadata_parent_sector);
+          }
+        });
+        return Array.from(uniqueSectors);
+      })
+    );
   }
 }
