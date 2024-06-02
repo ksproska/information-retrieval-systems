@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SerpComponent } from './serp.component';
+import {MatSliderModule} from "@angular/material/slider";
 
 describe('SerpComponent', () => {
   let component: SerpComponent;
@@ -8,10 +9,10 @@ describe('SerpComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SerpComponent]
+      imports: [SerpComponent, MatSliderModule]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(SerpComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

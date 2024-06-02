@@ -1,8 +1,68 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-lg-2 h-100 bg-secondary bg-opacity-25">
-      <br><span routerLink="">Filters</span>
-      <br>Filters
+    <div class="col-lg-2 h-100 bg-secondary bg-opacity-80">
+
+      <div class="input-group shadow rounded-5 mt-4">
+        <select
+          class="form-select-sm rounded-start-5 rounded-end-5 w-100 text-secondary border-start-0 border-secondary border-opacity-25"
+          aria-describedby="addon-sort">
+          <option value="" selected>YDS</option>
+          <option value="YDS">YDS</option>
+        </select>
+      </div>
+
+      <div>
+        <span>{{gradeValues[0]}}</span>
+        <mat-slider
+          [displayWith]="displayWith.bind(this)"
+          [min]="0"
+          [max]="gradeValues.length - 1"
+          step="1"
+          thumbLabel
+          discrete>
+          <input matSliderStartThumb [value]="0" (change)="onSliderChange1($event)">
+          <input matSliderEndThumb [value]="gradeValues.length - 1" (change)="onSliderChange2($event)">
+        </mat-slider>
+        <span>{{gradeValues.at(-1)}}</span>
+      </div>
+
+      <div>
+        <h2>Typ trasy</h2>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="selectAll" (change)="toggleAll($event)" checked>
+          <label class="form-check-label" for="selectAll">
+            Wszystkie typy
+          </label>
+        </div>
+        <div style="margin-left: 15px;">
+        <ng-container *ngFor="let type of allTypeNames; let i = index">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="'type' + {{i}}" [(ngModel)]="selectedTypes[i]" (change)="onCheckboxChange()">
+            <label class="form-check-label" for="'type' + {{i}}">
+              {{type}}
+            </label>
+          </div>
+        </ng-container>
+        </div>
+
+      </div>
+
+
+
+      <div class="input-group shadow rounded-5 mt-4">
+        <select
+          class="form-select-sm rounded-start-5 rounded-end-5 w-100 text-secondary border-start-0 border-secondary border-opacity-25"
+          aria-describedby="addon-sort"
+          [(ngModel)]="sector"
+          (ngModelChange)="updateSearch()">
+          <option value="" selected>Wszystkie grupy skał</option>
+          <ng-container *ngFor="let parentSector of allParentSectorsForFilters; let i = index">
+            <option value="{{parentSector}}">{{parentSector}}</option>
+          </ng-container>
+        </select>
+      </div>
+
+
       <br>Filters
       <br>Filters
       <br>Filters
