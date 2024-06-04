@@ -5,8 +5,10 @@ import {ActivatedRoute} from '@angular/router';
 import {FormsModule} from "@angular/forms";
 import {ElasticsearchService} from "../../services/elasticsearch.service";
 import {CommonModule, JsonPipe, NgIf} from "@angular/common";
-import {RouterLink} from "@angular/router";
 import {MatSliderModule} from "@angular/material/slider";
+import {ElasticsearchResponseTypeCounts} from "../../models/elasticsearch-response-type-counts";
+import {MatPaginator, PageEvent} from "@angular/material/paginator";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @Component({
   selector: 'app-serp',
@@ -20,7 +22,8 @@ import {MatSliderModule} from "@angular/material/slider";
     NgIf,
     RouterLink,
     MatSliderModule,
-    CommonModule
+    CommonModule,
+    MatPaginator
   ],
   templateUrl: './serp.component.html',
   styleUrl: './serp.component.css'
@@ -31,7 +34,7 @@ export class SerpComponent {
   ydsLowerGrade: string = "3rd";
   ydsUpperGrade: string = "V?";
   pageNumber: number = 1;
-  pageSize: number = 10;
+  pageSize: number = 20;
   sector: string = "";
   selectedSort: string = "none";
 
@@ -46,48 +49,7 @@ export class SerpComponent {
   allTypeNames: string[];
   allGradeNamesInOrderEasiestToHardest: string[]
   allParentSectorsForFilters: string[] | undefined
-
   selectedTypes: any[];
-
-  toggleAll(event: any) {
-    const isChecked = event.target.checked;
-    this.selectedTypes.fill(isChecked);
-    this.typeNames = this.allTypeNames.filter((_, index) => !this.selectedTypes[index]);
-    this.updateSearch()
-  }
-
-  get displayValue1(): number {
-    return this.gradeValues[this.sliderValue1];
-  }
-
-  get displayValue2(): number {
-    return this.gradeValues[this.sliderValue2];
-  }
-
-  onSliderChange1(event: any): void {
-    console.log((event.target as HTMLInputElement).value)
-    this.sliderValue1 = parseInt((event.target as HTMLInputElement).value);
-    this.ydsLowerGrade = this.gradeValues[this.sliderValue1];
-    console.log(this.ydsLowerGrade);
-    this.updateSearch();
-  }
-
-  onSliderChange2(event: any): void {
-    this.sliderValue2 = parseInt((event.target as HTMLInputElement).value);
-    this.ydsUpperGrade = this.gradeValues[this.sliderValue2];
-    this.updateSearch();
-  }
-
-
-  displayWith(value: number): string {
-    return this.gradeValues[value].toString();
-  }
-
-  onCheckboxChange(): void{
-    this.typeNames = this.allTypeNames.filter((_, index) => this.selectedTypes[index]);
-    this.updateSearch();
-  }
-
 
 
   constructor(private route: ActivatedRoute, private elasticsearchService: ElasticsearchService) {
@@ -148,5 +110,40 @@ export class SerpComponent {
         this.errorMessage = 'Search error: ' + error.message;
       }
     });
+  }
+
+  toggleAll(event: any) {
+    const isChecked = event.target.checked;
+    this.selectedTypes.fill(isChecked);
+    this.typeNames = this.allTypeNames.filter((_, index) => this.selectedTypes[index]);
+    this.updateSearch()
+  }
+
+  onSliderChange1(event: any): void {
+    this.sliderValue1 = parseInt((event.target as HTMLInputElement).value);
+    this.ydsLowerGrade = this.gradeValues[this.sliderValue1];
+    this.updateSearch();
+  }
+
+  onSliderChange2(event: any): void {
+    this.sliderValue2 = parseInt((event.target as HTMLInputElement).value);
+    this.ydsUpperGrade = this.gradeValues[this.sliderValue2];
+    this.updateSearch();
+  }
+
+
+  displayWith(value: number): string {
+    return this.gradeValues[value].toString();
+  }
+
+  onCheckboxChange(): void{
+    this.typeNames = this.allTypeNames.filter((_, index) => this.selectedTypes[index]);
+    this.updateSearch();
+  }
+
+  onPageChange(event: PageEvent): void {
+    this.pageSize = event.pageSize;
+    this.pageNumber = event.pageIndex;
+    this.updateSearch();
   }
 }
