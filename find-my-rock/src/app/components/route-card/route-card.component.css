@@ -11,6 +11,35 @@
 .color-hard {background-color: #FF4500}
 .color-hardest {background-color: #8B0000}
 
+/*.overflow-3-line{*/
+/*  text-overflow: ellipsis;*/
+/*  overflow: hidden;*/
+/*  height: 3.4em;*/
+/*  display: block;*/
+/*  overflow: hidden;*/
+/*  text-overflow: ellipsis;*/
+/*  position: relative;*/
+/*  padding: 0 0.5em;*/
+/*}*/
+
+/*.overflow-3-line:after {*/
+/*  content: '...';*/
+/*  display: inline-block;*/
+/*  color: #000;*/
+/*  font-size: 20px;*/
+/*  position: relative;*/
+/*  top: -40px;*/
+/*  left: 31px;*/
+/*}*/
+
+.overflow-3-line {
+  position: relative;
+  height: calc(1.5em * 3);
+  overflow: hidden;
+  word-break: normal;
+}
+
+
 .d-flex {
   display: flex;
   align-items: stretch;
