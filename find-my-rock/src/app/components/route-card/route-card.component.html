@@ -1,0 +1,10 @@
+<hr>
+<div class="d-flex mb-3">
+  <div [ngClass]="colorDifficulty" class="color-bar color-red flex-shrink-0"></div>
+  <div class="ms-3 flex-grow-1">
+    <p><strong>Name:</strong> {{route.route_name}}</p>
+    <p><strong>Type:</strong> {{checkRouteTypes()}}</p>
+    <p><strong>Description:</strong> {{route.description}}</p>
+    <p><strong>Sector:</strong> {{route.metadata_parent_sector}}</p>
+  </div>
+</div>

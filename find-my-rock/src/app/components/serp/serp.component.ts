@@ -1,4 +1,6 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
+import {RouterLink, ɵEmptyOutletComponent} from "@angular/router";
+import {RouteCardComponent} from "../route-card/route-card.component";
 import {ActivatedRoute} from '@angular/router';
 import {FormsModule} from "@angular/forms";
 import {ElasticsearchService} from "../../services/elasticsearch.service";
@@ -8,6 +10,9 @@ import {JsonPipe, NgIf} from "@angular/common";
   selector: 'app-serp',
   standalone: true,
   imports: [
+    RouterLink,
+    ɵEmptyOutletComponent,
+    RouteCardComponent,
     FormsModule,
     JsonPipe,
     NgIf
