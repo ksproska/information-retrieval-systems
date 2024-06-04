@@ -1,4 +1,6 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
+import {RouterLink, ɵEmptyOutletComponent} from "@angular/router";
+import {RouteCardComponent} from "../route-card/route-card.component";
 import {ActivatedRoute} from '@angular/router';
 import {FormsModule} from "@angular/forms";
 import {ElasticsearchService} from "../../services/elasticsearch.service";
@@ -10,6 +12,9 @@ import {MatSliderModule} from "@angular/material/slider";
   selector: 'app-serp',
   standalone: true,
   imports: [
+    RouterLink,
+    ɵEmptyOutletComponent,
+    RouteCardComponent,
     FormsModule,
     JsonPipe,
     NgIf,
@@ -31,6 +36,7 @@ export class SerpComponent {
   selectedSort: string = "none";
 
   searchResults: any;
+  countsForTypesMap: any;
   errorMessage: string | null = null;
   gradeValues: any[]
   sliderValue1 = 0;
@@ -128,5 +134,19 @@ export class SerpComponent {
         }
       }
     );
+    this.elasticsearchService.getCountsForTypes(
+      this.query,
+      this.typeNames,
+      this.ydsLowerGrade,
+      this.ydsUpperGrade,
+      this.sector
+    ).subscribe({
+      next: (response) => {
+        this.countsForTypesMap = response.aggregations;
+      },
+      error: (error) => {
+        this.errorMessage = 'Search error: ' + error.message;
+      }
+    });
   }
 }

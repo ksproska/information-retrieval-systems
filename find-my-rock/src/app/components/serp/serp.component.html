@@ -109,10 +109,12 @@
         </div>
       </div>
 
-
-      <hr>
-
-
+      @for (route of searchResults; track route){
+        <app-route-card [route]="route._source"></app-route-card>
+      }
+<!--    <app-route-card></app-route-card>-->
+<!--    <app-route-card></app-route-card>-->
+<!--    <app-route-card></app-route-card>-->
     </div>
 
 
