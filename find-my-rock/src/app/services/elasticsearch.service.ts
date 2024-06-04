@@ -3,6 +3,7 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {map, Observable} from "rxjs";
 import {ElasticsearchResponse} from "../models/elasticsearch-response";
 import {ElasticsearchResponseParentSector} from "../models/elasticsearch-response-parent-sector";
+import {ElasticsearchResponseTypeCounts} from "../models/elasticsearch-response-type-counts";
 
 interface Filter {
   term: Record<string, any>;
@@ -179,5 +180,62 @@ export class ElasticsearchService {
         return Array.from(uniqueSectors);
       })
     );
+  }
+
+  getCountsForTypes(
+    text: string,
+    typeNames: string[] = [],
+    yds_lower_grade: string = "3rd",
+    yds_upper_grade: string = "V?",
+    sector: string = ""
+  ) {
+    const headers = this.headers
+    const filterObjects: Object[] = typeNames.map(filterName => this.typesDictionary[filterName]);
+
+    if (sector !== "" && sector !== null) {
+      const sectorFilter = {
+        term: {
+          "metadata_parent_sector.keyword": sector
+        }
+      }
+      filterObjects.push(sectorFilter)
+    }
+
+    const gradeFilter = {
+      terms: {
+        "grade_YDS.keyword": this.getGradesBetweenBounds(yds_lower_grade, yds_upper_grade)
+      }
+    }
+    filterObjects.push(gradeFilter)
+
+    const query = {
+      bool: {
+        must: [
+          {
+            query_string: {
+              query: text,
+              default_operator: "AND"
+            }
+          },
+          ...filterObjects
+        ]
+      }
+    }
+    const body = {
+      "size": 0,
+      query: query,
+      "aggs": {
+        "boulder": {"filter": {"term": {"type_boulder": true}}},
+        "tr": {"filter": {"term": {"type_tr": true}}},
+        "sport": {"filter": {"term": {"type_sport": true}}},
+        "trad": {"filter": {"term": {"type_trad": true}}},
+        "aid": {"filter": {"term": {"type_aid": true}}},
+        "ice": {"filter": {"term": {"type_ice": true}}},
+        "mixed": {"filter": {"term": {"type_mixed": true}}},
+        "snow": {"filter": {"term": {"type_snow": true}}},
+        "alpine": {"filter": {"term": {"type_alpine": true}}}
+      }
+    }
+    return this.http.post<ElasticsearchResponseTypeCounts>(this.elasticsearchUrl, body, { headers });
   }
 }

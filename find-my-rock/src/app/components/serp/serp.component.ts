@@ -26,6 +26,7 @@ export class SerpComponent {
   selectedSort: string = "none";
 
   searchResults: any;
+  countsForTypesMap: any;
   errorMessage: string | null = null;
 
   allTypeNames: string[];
@@ -73,5 +74,19 @@ export class SerpComponent {
         }
       }
     );
+    this.elasticsearchService.getCountsForTypes(
+      this.query,
+      this.typeNames,
+      this.ydsLowerGrade,
+      this.ydsUpperGrade,
+      this.sector
+    ).subscribe({
+      next: (response) => {
+        this.countsForTypesMap = response.aggregations;
+      },
+      error: (error) => {
+        this.errorMessage = 'Search error: ' + error.message;
+      }
+    });
   }
 }
