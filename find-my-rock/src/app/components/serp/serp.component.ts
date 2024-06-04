@@ -27,7 +27,7 @@ import {MatSliderModule} from "@angular/material/slider";
 })
 export class SerpComponent {
   query: string = "";
-  typeNames: string[] = [];
+  typeNames: string[] = this.elasticsearchService.getAllTypeNames();
   ydsLowerGrade: string = "3rd";
   ydsUpperGrade: string = "V?";
   pageNumber: number = 1;

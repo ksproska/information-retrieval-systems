@@ -86,7 +86,7 @@ export class ElasticsearchService {
 
   searchInAllFieldsWithFilters(
     text: string,
-    typeNames: string[] = [],
+    typeNames: string[] = this.getAllTypeNames(),
     yds_lower_grade: string = "3rd",
     yds_upper_grade: string = "V?",
     pageNumber: number = 1,
@@ -95,39 +95,24 @@ export class ElasticsearchService {
     sortName: string = "none"
   ): Observable<ElasticsearchResponse> {
     const headers = this.headers
-    const filterObjects: Object[] = typeNames.map(filterName => this.typesDictionary[filterName]);
+
+    let mustConditions: any[] = [
+      {query_string: {query: text, default_operator: "AND"}},
+      {terms: {"grade_YDS.keyword": this.getGradesBetweenBounds(yds_lower_grade, yds_upper_grade)}}
+    ];
 
     if (sector !== "" && sector !== null) {
-      const sectorFilter = {
-        term: {
-          "metadata_parent_sector.keyword": sector
-        }
-      }
-      filterObjects.push(sectorFilter)
+      mustConditions.push({term: {"metadata_parent_sector.keyword": sector}});
     }
 
-    const gradeFilter = {
-      terms: {
-        "grade_YDS.keyword": this.getGradesBetweenBounds(yds_lower_grade, yds_upper_grade)
-      }
-    }
-    filterObjects.push(gradeFilter)
-
-    const query = {
-      bool: {
-        must: [
-          {
-            query_string: {
-              query: text,
-              default_operator: "AND"
-            }
-          },
-          ...filterObjects
-        ]
-      }
-    }
     const body = {
-      query: query,
+      query: {
+        bool: {
+          must: mustConditions,
+          should: [...typeNames.map(filterName => this.typesDictionary[filterName])],
+          minimum_should_match: 1
+        }
+      },
       sort: this.sortDictionary[sortName],
       "from": (pageNumber - 1) * pageSize,
       "size": pageSize
@@ -137,33 +122,22 @@ export class ElasticsearchService {
 
   getAllParentSectors(
     text: string,
-    typeNames: string[] = [],
+    typeNames: string[] = this.getAllTypeNames(),
     yds_lower_grade: string = "3rd",
     yds_upper_grade: string = "V?"
   ) {
     const headers = this.headers;
-    const filterObjects: Object[] = typeNames.map(filterName => this.typesDictionary[filterName]);
-
-    const gradeFilter = {
-      terms: {
-        "grade_YDS.keyword": this.getGradesBetweenBounds(yds_lower_grade, yds_upper_grade)
-      }
-    };
-    filterObjects.push(gradeFilter);
 
     const body = {
       size: 10000,
       query: {
         bool: {
           must: [
-            {
-              query_string: {
-                query: text,
-                default_operator: "AND"
-              }
-            },
-            ...filterObjects
-          ]
+            {query_string: {query: text, default_operator: "AND"}},
+            {terms: {"grade_YDS.keyword": this.getGradesBetweenBounds(yds_lower_grade, yds_upper_grade)}}
+          ],
+          should: [...typeNames.map(filterName => this.typesDictionary[filterName])],
+          minimum_should_match: 1
         }
       },
       "_source": ["metadata_parent_sector"]
@@ -184,56 +158,41 @@ export class ElasticsearchService {
 
   getCountsForTypes(
     text: string,
-    typeNames: string[] = [],
+    typeNames: string[] = this.getAllTypeNames(),
     yds_lower_grade: string = "3rd",
     yds_upper_grade: string = "V?",
     sector: string = ""
   ) {
     const headers = this.headers
-    const filterObjects: Object[] = typeNames.map(filterName => this.typesDictionary[filterName]);
+
+    let mustConditions: any[] = [
+      {query_string: {query: text, default_operator: "AND"}},
+      {terms: {"grade_YDS.keyword": this.getGradesBetweenBounds(yds_lower_grade, yds_upper_grade)}}
+    ]
 
     if (sector !== "" && sector !== null) {
-      const sectorFilter = {
-        term: {
-          "metadata_parent_sector.keyword": sector
-        }
-      }
-      filterObjects.push(sectorFilter)
+      mustConditions.push({term: {"metadata_parent_sector.keyword": sector}})
     }
 
-    const gradeFilter = {
-      terms: {
-        "grade_YDS.keyword": this.getGradesBetweenBounds(yds_lower_grade, yds_upper_grade)
-      }
-    }
-    filterObjects.push(gradeFilter)
-
-    const query = {
-      bool: {
-        must: [
-          {
-            query_string: {
-              query: text,
-              default_operator: "AND"
-            }
-          },
-          ...filterObjects
-        ]
-      }
-    }
     const body = {
-      "size": 0,
-      query: query,
-      "aggs": {
-        "boulder": {"filter": {"term": {"type_boulder": true}}},
-        "tr": {"filter": {"term": {"type_tr": true}}},
-        "sport": {"filter": {"term": {"type_sport": true}}},
-        "trad": {"filter": {"term": {"type_trad": true}}},
-        "aid": {"filter": {"term": {"type_aid": true}}},
-        "ice": {"filter": {"term": {"type_ice": true}}},
-        "mixed": {"filter": {"term": {"type_mixed": true}}},
-        "snow": {"filter": {"term": {"type_snow": true}}},
-        "alpine": {"filter": {"term": {"type_alpine": true}}}
+      size: 0,
+      query: {
+        bool: {
+          must: mustConditions,
+          should: [...typeNames.map(filterName => this.typesDictionary[filterName])],
+          minimum_should_match: 1
+        }
+      },
+      aggs: {
+        boulder: {filter: {term: {type_boulder: true}}},
+        tr:      {filter: {term: {type_tr:      true}}},
+        sport:   {filter: {term: {type_sport:   true}}},
+        trad:    {filter: {term: {type_trad:    true}}},
+        aid:     {filter: {term: {type_aid:     true}}},
+        ice:     {filter: {term: {type_ice:     true}}},
+        mixed:   {filter: {term: {type_mixed:   true}}},
+        snow:    {filter: {term: {type_snow:    true}}},
+        alpine:  {filter: {term: {type_alpine:  true}}}
       }
     }
     return this.http.post<ElasticsearchResponseTypeCounts>(this.elasticsearchUrl, body, { headers });
