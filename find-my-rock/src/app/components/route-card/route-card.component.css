@@ -1,0 +1,17 @@
+.color-bar {
+  width: 20px;
+  height: auto;
+  background-color: inherit;
+}
+
+/*TODO: adjust color pallet*/
+.color-easiest {background-color: #7FFF00}
+.color-easy {background-color: #FFFF00}
+.color-medium {background-color: #FFA500}
+.color-hard {background-color: #FF4500}
+.color-hardest {background-color: #8B0000}
+
+.d-flex {
+  display: flex;
+  align-items: stretch;
+}
