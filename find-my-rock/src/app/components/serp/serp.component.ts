@@ -31,6 +31,7 @@ export class SerpComponent {
   selectedSort: string = "none";
 
   searchResults: any;
+  isResultEmpty?: boolean;
   countsForTypesMap: any;
   errorMessage: string | null = null;
 
@@ -60,6 +61,7 @@ export class SerpComponent {
     ).subscribe({
       next: (response) => {
         this.searchResults = response.hits.hits;
+        this.isResultEmpty = this.searchResults.length === 0;
       },
       error: (error) => {
         this.errorMessage = 'Search error: ' + error.message;

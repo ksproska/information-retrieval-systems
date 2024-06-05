@@ -1,12 +1,16 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {NgClass} from "@angular/common";
 import {Route} from "../../models/route";
+import {RouterLink} from "@angular/router";
+import {SideBarComponent} from "../side-bar/side-bar.component";
 
 @Component({
   selector: 'app-route-card',
   standalone: true,
   imports: [
-    NgClass
+    NgClass,
+    RouterLink,
+    SideBarComponent
   ],
   templateUrl: './route-card.component.html',
   styleUrl: './route-card.component.css'
@@ -14,8 +18,13 @@ import {Route} from "../../models/route";
 
 
 export class RouteCardComponent implements OnInit{
+
+
   @Input() route!: Route
+  @Input() id!: string
   colorDifficulty: string = "color-easiest";
+  types: string = "";
+
 
   routeTypeMapping: {[key: string]: string} = {
     'type_trad': 'Traditional',
@@ -63,6 +72,7 @@ export class RouteCardComponent implements OnInit{
 
   ngOnInit(): void {
       this.updateDifficulty()
+      this.types = this.checkRouteTypes();
     }
   checkRouteTypes(): string{
     const routeType = Object.keys(this.routeTypeMapping)

@@ -1,0 +1,26 @@
+.modal.right-modal .modal-dialog {
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin: 0;
+  height: 100%;
+  width: 60%;
+  --bs-modal-width: 60%;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-out;
+}
+
+.modal.right-modal.show .modal-dialog {
+  transform: translateX(0);
+}
+
+.modal-content {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.color-easiest {background-color: #7FFF00}
+.color-easy {background-color: #FFFF00}
+.color-medium {background-color: #FFA500}
+.color-hard {background-color: #FF4500}
+.color-hardest {background-color: #8B0000}
