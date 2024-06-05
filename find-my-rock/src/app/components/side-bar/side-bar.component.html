@@ -1,0 +1,96 @@
+<!-- Sidebar Left -->
+<div class="modal right-modal fade" id="{{id}}" tabindex="-1" aria-labelledby="rightSideModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" [ngClass]="colorDifficulty">
+        <button type="button" class="btn-close ms-0 p-1" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container fs-5">
+          <div class="row">
+            <div class="col-5 ">
+              <p><strong>Name: </strong> <span>{{ route.route_name }}</span></p>
+              <p><strong>Type:</strong> {{types}}</p>
+              <div><strong>Difficulty:</strong>
+                <table class="table table-striped fs-6 text-center">
+                  <tbody>
+                    @if(route.grade_YDS) {
+                      <tr>
+                        <td>YDS:</td>
+                        <td>{{ route.grade_YDS }}</td>
+                      </tr>
+                    }
+                    @if(route.grade_French) {
+                        <tr>
+                          <td>French:</td>
+                          <td>{{ route.grade_French }}</td>
+                        </tr>
+                      }
+                    @if(route.grade_Ewbanks) {
+                        <tr>
+                          <td>Ewbanks</td>
+                          <td>{{ route.grade_Ewbanks }}</td>
+                        </tr>
+                      }
+                    @if(route.grade_UIAA) {
+                        <tr>
+                          <td>UIAA</td>
+                          <td>{{ route.grade_UIAA }}</td>
+                        </tr>
+                      }
+                    @if(route.grade_ZA) {
+                        <tr>
+                          <td>ZA</td>
+                          <td>{{ route.grade_ZA }}</td>
+                        </tr>
+                      }
+                    @if(route.grade_British) {
+                        <tr>
+                          <td>British</td>
+                          <td>{{ route.grade_British }}</td>
+                        </tr>
+                      }
+
+                  </tbody>
+                </table>
+<!--                <div class="fs-6 ">-->
+<!--                  @if(route.grade_YDS) {-->
+<!--                    <strong>YDS:</strong> {{ route.grade_YDS }}<br>-->
+<!--                  }-->
+<!--                  @if(route.grade_French) {-->
+<!--                    <strong>French:</strong> {{ route.grade_French }}<br>-->
+<!--                  }-->
+<!--                  @if(route.grade_Ewbanks) {-->
+<!--                    <strong>Ewbanks:</strong> {{ route.grade_Ewbanks }}<br>-->
+<!--                  }-->
+<!--                  @if(route.grade_UIAA) {-->
+<!--                    <strong>UIAA:</strong> {{ route.grade_UIAA }}<br>-->
+<!--                  }-->
+<!--                  @if(route.grade_ZA) {-->
+<!--                    <strong>ZA:</strong> {{ route.grade_ZA }}<br>-->
+<!--                  }-->
+<!--                  @if(route.grade_British) {-->
+<!--                    <strong>British:</strong> {{ route.grade_British }}<br>-->
+<!--                  }-->
+<!--                </div>-->
+              </div>
+
+              <p><strong>First attempt:</strong> {{ route.fa }}</p>
+              <div><strong>Sector:</strong> {{ route.metadata_parent_sector }}</div>
+            </div>
+            <div class="col-7">
+              <img alt="map" class="img-fluid" src="assets/map.jpg">
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <p class="overflow-3-line"><strong>Description:</strong> {{ route.description }}</p>
+            @if (route.safety){
+              <p class="overflow-3-line"><strong>Safety:</strong> {{ route.safety }}</p>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

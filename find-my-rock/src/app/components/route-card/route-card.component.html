@@ -2,9 +2,11 @@
 <div class="d-flex mb-3">
   <div [ngClass]="colorDifficulty" class="color-bar color-red flex-shrink-0"></div>
   <div class="ms-3 flex-grow-1">
-    <p><strong>Name:</strong> {{route.route_name}}</p>
-    <p><strong>Type:</strong> {{checkRouteTypes()}}</p>
-    <p class="overflow-3-line"><strong>Description</strong>: {{route.description}}</p>
-    <p><strong>Sector:</strong> {{route.metadata_parent_sector}}</p>
+    <p class="fs-5"><strong>Name: </strong> <a href="#" class="text-dark" data-bs-toggle="modal" [attr.data-bs-target]="'#'+id">{{ route.route_name }}</a></p>
+    <p><strong>Type:</strong> {{types}}</p>
+    <p class="overflow-3-line"><strong>Description:</strong> {{ route.description }}</p>
+    <p><strong>Sector:</strong> {{ route.metadata_parent_sector }}</p>
   </div>
 </div>
+
+<app-side-bar [id]="id" [route]="route" [colorDifficulty]="colorDifficulty" [types]="types"></app-side-bar>

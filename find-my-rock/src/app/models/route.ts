@@ -6,7 +6,7 @@ export interface Route {
   grade_UIAA?: string;
   grade_ZA?: string;
   grade_British?: string;
-  safety: string;
+  safety?: string;
   type_trad?: boolean;
   type_tr?: boolean;
   type_sport?: boolean;
