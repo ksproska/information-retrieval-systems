@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {RouterLink, ɵEmptyOutletComponent} from "@angular/router";
 import {RouteCardComponent} from "../route-card/route-card.component";
 import {ActivatedRoute} from '@angular/router';
@@ -51,6 +51,18 @@ export class SerpComponent {
   allParentSectorsForFilters: string[] | undefined
   selectedTypes: any[];
 
+
+  ngOnInit() {
+    this.allTypeNames = this.elasticsearchService.getAllTypeNames();
+    this.allGradeNamesInOrderEasiestToHardest = this.elasticsearchService.getAllGradeNamesInOrderEasiestToHardest()
+    this.gradeValues = this.allGradeNamesInOrderEasiestToHardest;
+    this.selectedTypes = Array(this.allTypeNames.length).fill(false);
+    this.route.queryParams.subscribe(params => {
+      this.query = params['query'] || "";
+      this.updateSearch();
+    });
+    this.selectedTypes.fill(true);
+  }
 
   constructor(private route: ActivatedRoute, private elasticsearchService: ElasticsearchService) {
     this.allTypeNames = elasticsearchService.getAllTypeNames();

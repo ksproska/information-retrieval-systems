@@ -45,7 +45,7 @@
                 {{type}}
               </div>
               <div class="col-auto">
-                {{countsForTypesMap[allTypeNames[i]]['doc_count']}}
+                {{countsForTypesMap?.[type]?.['doc_count'] ?? 0}}
               </div>
             </label>
           </div>
