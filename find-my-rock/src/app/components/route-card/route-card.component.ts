@@ -40,6 +40,8 @@ export class RouteCardComponent implements OnInit{
 
   private readonly levels = ['easiest', 'easy', 'medium', 'hard', 'hardest'];
 
+  map = new Map<string, bigint>
+
   private readonly gradeMappings: { [key: string]: string } = {
     // XD
     "3rd": 'easiest', "4th": 'easiest', "Easy 5th": 'easy', "5.0": 'easy', "5.1": 'easy',
