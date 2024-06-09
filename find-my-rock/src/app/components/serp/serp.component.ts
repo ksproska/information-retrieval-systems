@@ -51,6 +51,7 @@ export class SerpComponent {
   allGradeNamesInOrderEasiestToHardest: string[]
   allParentSectorsForFilters: string[] | undefined
   selectedTypes: any[];
+  selectAll = 1;
 
   routeTypeMapping: {[key: string]: string} = {
     'trad': 'Traditional',
@@ -164,6 +165,11 @@ export class SerpComponent {
 
   onCheckboxChange(): void{
     this.typeNames = this.allTypeNames.filter((_, index) => this.selectedTypes[index]);
+    if (this.typeNames.length !== this.allTypeNames.length){
+      this.selectAll = 0;
+    } else {
+      this.selectAll = 1;
+    }
     this.updateSearch();
   }
 
