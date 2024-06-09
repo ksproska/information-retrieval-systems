@@ -34,7 +34,7 @@ export class SerpComponent {
   ydsLowerGrade: string = "3rd";
   ydsUpperGrade: string = "V?";
   pageNumber: number = 1;
-  pageSize: number = 20;
+  pageSize: number = 10;
   sector: string = "";
   selectedSort: string = "none";
 
@@ -51,6 +51,18 @@ export class SerpComponent {
   allGradeNamesInOrderEasiestToHardest: string[]
   allParentSectorsForFilters: string[] | undefined
   selectedTypes: any[];
+
+  routeTypeMapping: {[key: string]: string} = {
+    'trad': 'Traditional',
+    'sport': 'Sport',
+    'aid': 'Aid',
+    'ice': 'Ice',
+    'tr': 'Top Rope',
+    'boulder': 'Boulder',
+    'mixed': 'Mixed',
+    'snow': 'Snow',
+    'alpine': 'Alpine'
+  }
 
 
   ngOnInit() {
@@ -157,7 +169,7 @@ export class SerpComponent {
 
   onPageChange(event: PageEvent): void {
     this.pageSize = event.pageSize;
-    this.pageNumber = event.pageIndex;
+    this.pageNumber = event.pageIndex + 1;
     this.updateSearch();
   }
 }
